@@ -3,7 +3,7 @@
  * author: OHASHI Kent
  */
 
-object ProgramInScala {
+object AlgorithmInScala2 {
   /*
    * 逐次探索アルゴリズムによりリストlistの指定した要素targetの位置を取得する。
    * リスト内に該当する要素がない場合、Noneを返却する。

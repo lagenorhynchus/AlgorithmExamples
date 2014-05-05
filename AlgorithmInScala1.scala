@@ -3,7 +3,7 @@
  * author: OHASHI Kent
  */
 
-object ProgramInScala {
+object AlgorithmInScala1 {
   /*
    * 西暦年yearが閏年かどうかを判定する。
    */
