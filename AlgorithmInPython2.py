@@ -3,36 +3,36 @@
 # リストの探索とソートのアルゴリズム
 # author: OHASHI Kent
 
-# 逐次探索アルゴリズムによりリストlistの指定した要素targetの位置を取得する。
+# 逐次探索アルゴリズムによりリストlstの指定した要素targetの位置を取得する。
 # リスト内に該当する要素がない場合、Noneを返却する。
-def sequential_search(list, target):
+def sequential_search(lst, target):
     # TODO: ロジックを実装
     pass
 
-# 二分探索アルゴリズムによりソート済みリストlistの指定した要素targetの位置を取得する。
+# 二分探索アルゴリズムによりソート済みリストlstの指定した要素targetの位置を取得する。
 # リスト内に該当する要素がない場合、Noneを返却する。
-def binary_search(list, target):
+def binary_search(lst, target):
     # TODO: ロジックを実装
     pass
 
-# バブルソートアルゴリズムによりリストlistを昇順にソートする。
-def bubble_sort(list):
+# バブルソートアルゴリズムによりリストlstを昇順にソートする。
+def bubble_sort(lst):
     # TODO: ロジックを実装
     pass
 
-# セレクションソートアルゴリズムによりリストlistを昇順にソートする。
-def selection_sort(list):
+# セレクションソートアルゴリズムによりリストlstを昇順にソートする。
+def selection_sort(lst):
     # TODO: ロジックを実装
     pass
 
-# クイックソートアルゴリズムによりリストlistを昇順にソートする。
-def quick_sort(list):
+# クイックソートアルゴリズムによりリストlstを昇順にソートする。
+def quick_sort(lst):
     # TODO: ロジックを実装
     pass
 
-def q_sort(list, left, right):
+def q_sort(lst, left, right):
     # TODO: ロジックを実装
     pass
 
-def swap(list, x, y):
-    list[x], list[y] = list[y], list[x]
+def swap(lst, x, y):
+    lst[x], lst[y] = lst[y], lst[x]
