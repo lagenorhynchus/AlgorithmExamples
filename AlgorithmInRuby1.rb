@@ -99,7 +99,7 @@ def fibonacci_2(i)
     return 1
   end
 
-  return fibonacci(i-2) + fibonacci(i-1)
+  return fibonacci_2(i-2) + fibonacci_2(i-1)
 end
 
 # 整数nの階乗n!の値を算出する。
