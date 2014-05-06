@@ -85,4 +85,12 @@ public class AlgorithmInJava1 {
         // TODO: ロジックを実装
         return null;
     }
+
+    /*
+     * 畳み込み版
+     */
+    public static Integer factorial3(int n) {
+        // TODO: ロジックを実装
+        return null;
+    }
 }

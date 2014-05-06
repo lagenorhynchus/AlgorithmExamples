@@ -82,4 +82,12 @@ object AlgorithmInScala1 {
     // TODO: ロジックを実装
     None
   }
+
+  /*
+   * 畳み込み版
+   */
+  def factorial3(n: Int): Option[Int] = {
+    // TODO: ロジックを実装
+    None
+  }
 }

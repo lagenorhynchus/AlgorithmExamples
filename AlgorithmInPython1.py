@@ -4,6 +4,7 @@
 # author: OHASHI Kent
 
 from math import sqrt
+from functools import reduce
 
 # 西暦年yearが閏年かどうかを判定する。
 def is_leap_year(year):
@@ -101,3 +102,10 @@ def factorial_2(n):
         return 1
     else:
         return n * factorial_2(n-1)
+
+# 畳み込み版
+def factorial_3(n):
+    if n < 0:
+        return None
+
+    return reduce(lambda product, i: product * i, range(2, n+1), 1)

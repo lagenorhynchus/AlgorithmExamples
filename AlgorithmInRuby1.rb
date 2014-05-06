@@ -127,3 +127,12 @@ def factorial_2(n)
 
   return n * factorial_2(n-1)
 end
+
+# 畳み込み版
+def factorial_3(n)
+  if n < 0
+    return nil
+  end
+
+  return (2..n).inject(1) {|product, i| product * i}
+end

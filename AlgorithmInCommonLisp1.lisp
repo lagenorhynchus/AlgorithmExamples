@@ -52,3 +52,8 @@
 (defun factorial-2 (n)
   ;; TODO: ロジックを実装
   nil)
+
+;;; 畳み込み版
+(defun factorial-3 (n)
+  ;; TODO: ロジックを実装
+  nil)

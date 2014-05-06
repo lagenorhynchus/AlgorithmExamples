@@ -61,3 +61,9 @@ var factorial2 = function (n) {
     // TODO: ロジックを実装
     return null;
 };
+
+// 畳み込み版
+var factorial3 = function (n) {
+    // TODO: ロジックを実装
+    return null;
+};

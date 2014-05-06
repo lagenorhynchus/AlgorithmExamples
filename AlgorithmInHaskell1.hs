@@ -54,3 +54,8 @@ factorial n = Nothing
 factorial2 :: Int -> Maybe Int
 factorial2 n = Nothing
 -- TODO: ロジックを実装
+
+-- 畳み込み版
+factorial3 :: Int -> Maybe Int
+factorial3 n = Nothing
+-- TODO: ロジックを実装

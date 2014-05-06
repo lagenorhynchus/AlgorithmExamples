@@ -52,3 +52,8 @@
 (defn factorial-2 [n]
   ;; TODO: ロジックを実装
   nil)
+
+;;; 畳み込み版
+(defn factorial-3 [n]
+  ;; TODO: ロジックを実装
+  nil)
