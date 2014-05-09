@@ -3,8 +3,8 @@
 # 数値計算のアルゴリズム
 # author: OHASHI Kent
 
-from math import sqrt
 from functools import reduce
+from math import sqrt
 
 # 西暦年yearが閏年かどうかを判定する。
 def is_leap_year(year):
