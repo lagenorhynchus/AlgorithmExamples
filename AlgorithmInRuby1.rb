@@ -95,11 +95,17 @@ end
 def fibonacci_2(i)
   if i < 1
     return nil
-  elsif i == 1 || i == 2
+  elsif [1, 2].include?(i)
     return 1
   end
 
   return fibonacci_2(i-2) + fibonacci_2(i-1)
+end
+
+# 再帰(メモ化)版
+def fibonacci_3(i)
+  # TODO: ロジックを実装
+  return nil
 end
 
 # 整数nの階乗n!の値を算出する。
@@ -121,7 +127,7 @@ end
 def factorial_2(n)
   if n < 0
     return nil
-  elsif n == 0 || n == 1
+  elsif [0, 1].include?(n)
     return 1
   end
 

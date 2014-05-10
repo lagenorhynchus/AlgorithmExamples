@@ -82,6 +82,11 @@ def fibonacci_2(i):
 
     return fibonacci_2(i-2) + fibonacci_2(i-1)
 
+# 再帰(メモ化)版
+def fibonacci_3(i):
+    # TODO: ロジックを実装
+    pass
+
 # 整数nの階乗n!の値を算出する。
 # nが負の数の場合、Noneを返却する。
 # ループ版

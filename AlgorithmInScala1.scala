@@ -66,6 +66,14 @@ object AlgorithmInScala1 {
   }
 
   /*
+   * 再帰(メモ化)版
+   */
+  def fibonacci3(i: Int): Option[Int] = {
+    // TODO: ロジックを実装
+    None
+  }
+
+  /*
    * 整数nの階乗n!の値を算出する。
    * nが負の数の場合、Noneを返却する。
    * 再帰版

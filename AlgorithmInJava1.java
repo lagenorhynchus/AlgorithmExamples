@@ -69,6 +69,14 @@ public class AlgorithmInJava1 {
     }
 
     /*
+     * 再帰(メモ化)版
+     */
+    public static Integer fibonacci3(int i) {
+        // TODO: ロジックを実装
+        return null;
+    }
+
+    /*
      * 整数nの階乗n!の値を算出する。
      * nが負の数の場合、nullを返却する。
      * ループ版
