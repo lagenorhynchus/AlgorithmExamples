@@ -3,6 +3,8 @@
 author: OHASHI Kent
 -}
 
+module AlgorithmInHaskell2 where
+
 -- 逐次探索アルゴリズムによりリストlistの指定した要素targetの位置を取得する。
 -- リスト内に該当する要素がない場合、Nothingを返却する。
 sequentialSearch :: [Int] -> Int -> Maybe Int

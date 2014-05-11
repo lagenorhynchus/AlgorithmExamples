@@ -3,6 +3,8 @@
 author: OHASHI Kent
 -}
 
+module AlgorithmInHaskell1 where
+
 -- 西暦年yearが閏年かどうかを判定する。
 isLeapYear :: Int -> Bool
 isLeapYear year
