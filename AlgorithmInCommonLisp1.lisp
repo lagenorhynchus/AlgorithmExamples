@@ -36,13 +36,18 @@
   ;; TODO: ロジックを実装
   nil)
 
-;;; ループ版
+;;; 末尾再帰版
 (defun fibonacci-2 (i)
   ;; TODO: ロジックを実装
   nil)
 
-;;; 再帰(メモ化)版
+;;; ループ版
 (defun fibonacci-3 (i)
+  ;; TODO: ロジックを実装
+  nil)
+
+;;; 再帰(メモ化)版
+(defun fibonacci-4 (i)
   ;; TODO: ロジックを実装
   nil)
 
@@ -53,12 +58,22 @@
   ;; TODO: ロジックを実装
   nil)
 
-;;; ループ版
+;;; 末尾再帰版
 (defun factorial-2 (n)
   ;; TODO: ロジックを実装
   nil)
 
-;;; 畳み込み版
+;;; ループ版
 (defun factorial-3 (n)
+  ;; TODO: ロジックを実装
+  nil)
+
+;;; 畳み込み版
+(defun factorial-4 (n)
+  ;; TODO: ロジックを実装
+  nil)
+
+;;; 畳み込み版2
+(defun factorial-5 (n)
   ;; TODO: ロジックを実装
   nil)

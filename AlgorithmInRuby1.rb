@@ -102,8 +102,14 @@ def fibonacci_2(i)
   return fibonacci_2(i-2) + fibonacci_2(i-1)
 end
 
-# 再帰(メモ化)版
+# 末尾再帰版
 def fibonacci_3(i)
+  # TODO: ロジックを実装
+  return nil
+end
+
+# 再帰(メモ化)版
+def fibonacci_4(i)
   # TODO: ロジックを実装
   return nil
 end
@@ -134,11 +140,26 @@ def factorial_2(n)
   return n * factorial_2(n-1)
 end
 
-# 畳み込み版
+# 末尾再帰版
 def factorial_3(n)
+  # TODO: ロジックを実装
+  return nil
+end
+
+# 畳み込み版
+def factorial_4(n)
   if n < 0
     return nil
   end
 
   return (2..n).inject(1) {|product, i| product * i}
+end
+
+# 畳み込み版2
+def factorial_5(n)
+  if n < 0
+    return nil
+  end
+
+  return (2..n).inject(1, :+)
 end

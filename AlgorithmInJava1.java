@@ -69,9 +69,17 @@ public class AlgorithmInJava1 {
     }
 
     /*
-     * 再帰(メモ化)版
+     * 末尾再帰版
      */
     public static Integer fibonacci3(int i) {
+        // TODO: ロジックを実装
+        return null;
+    }
+
+    /*
+     * 再帰(メモ化)版
+     */
+    public static Integer fibonacci4(int i) {
         // TODO: ロジックを実装
         return null;
     }
@@ -95,9 +103,25 @@ public class AlgorithmInJava1 {
     }
 
     /*
-     * 畳み込み版
+     * 末尾再帰版
      */
     public static Integer factorial3(int n) {
+        // TODO: ロジックを実装
+        return null;
+    }
+
+    /*
+     * 畳み込み版
+     */
+    public static Integer factorial4(int n) {
+        // TODO: ロジックを実装
+        return null;
+    }
+
+    /*
+     * 畳み込み版2
+     */
+    public static Integer factorial5(int n) {
         // TODO: ロジックを実装
         return null;
     }

@@ -5,6 +5,7 @@
 
 from functools import reduce
 from math import sqrt
+from operator import mul
 
 # 西暦年yearが閏年かどうかを判定する。
 def is_leap_year(year):
@@ -82,8 +83,13 @@ def fibonacci_2(i):
 
     return fibonacci_2(i-2) + fibonacci_2(i-1)
 
-# 再帰(メモ化)版
+# 末尾再帰版
 def fibonacci_3(i):
+    # TODO: ロジックを実装
+    pass
+
+# 再帰(メモ化)版
+def fibonacci_4(i):
     # TODO: ロジックを実装
     pass
 
@@ -105,12 +111,24 @@ def factorial_2(n):
         return None
     elif n in [0, 1]:
         return 1
-    else:
-        return n * factorial_2(n-1)
+
+    return n * factorial_2(n-1)
+
+# 末尾再帰版
+def factorial_3(n):
+    # TODO: ロジックを実装
+    pass
 
 # 畳み込み版
-def factorial_3(n):
+def factorial_4(n):
     if n < 0:
         return None
 
     return reduce(lambda product, i: product * i, range(2, n+1), 1)
+
+# 畳み込み版2
+def factorial_5(n):
+    if n < 0:
+        return None
+
+    return reduce(mul, range(2, n+1), 1)

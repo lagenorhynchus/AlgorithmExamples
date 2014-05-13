@@ -58,14 +58,22 @@ fibonacci i
               fib 2 = 1
               fib x = fib (x-2) + fib (x-1)
 
--- ループ版
+-- 末尾再帰版
 fibonacci2 :: Int -> Maybe Integer
-fibonacci2 i = Nothing
+fibonacci2 i
+    | i < 1     = Nothing
+    | otherwise = Just $ fib i 1 0
+        where fib 1 prev curr = prev + curr
+              fib x prev curr = fib (x-1) curr (prev + curr)
+
+-- ループ版
+fibonacci3 :: Int -> Maybe Integer
+fibonacci3 i = Nothing
 -- TODO: ロジックを実装
 
 -- 再帰(メモ化)版
-fibonacci3 :: Int -> Maybe Integer
-fibonacci3 i
+fibonacci4 :: Int -> Maybe Integer
+fibonacci4 i
     | i < 1     = Nothing
     | otherwise = Just $ map fib [0..] !! i
         where fib 1 = 1
@@ -83,13 +91,28 @@ factorial n
               fact 1 = 1
               fact x = x * fact (x-1)
 
--- ループ版
+-- 末尾再帰版
 factorial2 :: Integer -> Maybe Integer
-factorial2 n = Nothing
+factorial2 n
+    | n < 0     = Nothing
+    | otherwise = Just $ fact n 1
+        where fact 0 prod = prod
+              fact 1 prod = prod
+              fact x prod = fact (x-1) (x * prod)
+
+-- ループ版
+factorial3 :: Integer -> Maybe Integer
+factorial3 n = Nothing
 -- TODO: ロジックを実装
 
 -- 畳み込み版
-factorial3 :: Integer -> Maybe Integer
-factorial3 n
+factorial4 :: Integer -> Maybe Integer
+factorial4 n
     | n < 0     = Nothing
     | otherwise = Just $ foldl (*) 1 [2..n]
+
+-- 畳み込み版2
+factorial5 :: Integer -> Maybe Integer
+factorial5 n
+    | n < 0     = Nothing
+    | otherwise = Just $ product [2..n]

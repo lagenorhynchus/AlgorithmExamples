@@ -48,8 +48,14 @@ var fibonacci2 = function (i) {
     return null;
 };
 
-// 再帰(メモ化)版
+// 末尾再帰版
 var fibonacci3 = function (i) {
+    // TODO: ロジックを実装
+    return null;
+};
+
+// 再帰(メモ化)版
+var fibonacci4 = function (i) {
     // TODO: ロジックを実装
     return null;
 };
@@ -68,8 +74,20 @@ var factorial2 = function (n) {
     return null;
 };
 
-// 畳み込み版
+// 末尾再帰版
 var factorial3 = function (n) {
+    // TODO: ロジックを実装
+    return null;
+};
+
+// 畳み込み版
+var factorial4 = function (n) {
+    // TODO: ロジックを実装
+    return null;
+};
+
+// 畳み込み版2
+var factorial5 = function (n) {
     // TODO: ロジックを実装
     return null;
 };

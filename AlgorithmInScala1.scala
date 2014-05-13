@@ -58,7 +58,7 @@ object AlgorithmInScala1 {
   }
 
   /*
-   * ループ版
+   * 末尾再帰版
    */
   def fibonacci2(i: Int): Option[Int] = {
     // TODO: ロジックを実装
@@ -66,9 +66,17 @@ object AlgorithmInScala1 {
   }
 
   /*
-   * 再帰(メモ化)版
+   * ループ版
    */
   def fibonacci3(i: Int): Option[Int] = {
+    // TODO: ロジックを実装
+    None
+  }
+
+  /*
+   * 再帰(メモ化)版
+   */
+  def fibonacci4(i: Int): Option[Int] = {
     // TODO: ロジックを実装
     None
   }
@@ -84,7 +92,7 @@ object AlgorithmInScala1 {
   }
 
   /*
-   * ループ版
+   * 末尾再帰版
    */
   def factorial2(n: Int): Option[Int] = {
     // TODO: ロジックを実装
@@ -92,9 +100,25 @@ object AlgorithmInScala1 {
   }
 
   /*
-   * 畳み込み版
+   * ループ版
    */
   def factorial3(n: Int): Option[Int] = {
+    // TODO: ロジックを実装
+    None
+  }
+
+  /*
+   * 畳み込み版
+   */
+  def factorial4(n: Int): Option[Int] = {
+    // TODO: ロジックを実装
+    None
+  }
+
+  /*
+   * 畳み込み版2
+   */
+  def factorial5(n: Int): Option[Int] = {
     // TODO: ロジックを実装
     None
   }
