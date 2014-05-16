@@ -104,14 +104,36 @@ end
 
 # 末尾再帰版
 def fibonacci_3(i)
-  # TODO: ロジックを実装
-  return nil
+  if i < 1
+    return nil
+  end
+
+  def fib(x, previous, current)
+    if x == 1
+      return previous + current
+    end
+
+    return fib(x-1, current, previous + current)
+  end
+  return fib(i, 1, 0)
 end
 
 # 再帰(メモ化)版
 def fibonacci_4(i)
-  # TODO: ロジックを実装
-  return nil
+  if i < 1
+    return nil
+  end
+
+  def fib(x, fib_dict = {})
+    if [1, 2].include?(x)
+      return 1
+    elsif !fib_dict.key?(x)
+      fib_dict[x] = fib(x-2) + fib(x-1)
+    end
+
+    return fib_dict[x]
+  end
+  return fib(i)
 end
 
 # 整数nの階乗n!の値を算出する。
@@ -142,8 +164,18 @@ end
 
 # 末尾再帰版
 def factorial_3(n)
-  # TODO: ロジックを実装
-  return nil
+  if n < 0
+    return nil
+  end
+
+  def fact(x, product)
+    if [0, 1].include?(x)
+      return product
+    end
+
+    return fact(x-1, x * product)
+  end
+  return fact(n, 1)
 end
 
 # 畳み込み版

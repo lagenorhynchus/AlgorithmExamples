@@ -85,13 +85,29 @@ def fibonacci_2(i):
 
 # 末尾再帰版
 def fibonacci_3(i):
-    # TODO: ロジックを実装
-    pass
+    if i < 1:
+        return None
+
+    def fib(x, previous, current):
+        if x == 1:
+            return previous + current
+
+        return fib(x-1, current, previous + current)
+    return fib(i, 1, 0)
 
 # 再帰(メモ化)版
 def fibonacci_4(i):
-    # TODO: ロジックを実装
-    pass
+    if i < 1:
+        return None
+
+    def fib(x, fib_dict = {}):
+        if x in [1, 2]:
+            return 1
+        elif not x in fib_dict:
+            fib_dict[x] = fib(x-2) + fib(x-1)
+
+        return fib_dict[x]
+    return fib(i)
 
 # 整数nの階乗n!の値を算出する。
 # nが負の数の場合、Noneを返却する。
@@ -116,8 +132,15 @@ def factorial_2(n):
 
 # 末尾再帰版
 def factorial_3(n):
-    # TODO: ロジックを実装
-    pass
+    if n < 0:
+        return None
+
+    def fact(x, product):
+        if x in [0, 1]:
+            return product
+
+        return fact(x-1, x * product)
+    return fact(n, 1)
 
 # 畳み込み版
 def factorial_4(n):
