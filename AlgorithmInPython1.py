@@ -103,7 +103,7 @@ def fibonacci_4(i):
     def fib(x, fib_dict = {}):
         if x in [1, 2]:
             return 1
-        elif not x in fib_dict:
+        elif x not in fib_dict:
             fib_dict[x] = fib(x-2) + fib(x-1)
 
         return fib_dict[x]
