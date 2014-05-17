@@ -99,7 +99,7 @@ def fibonacci_2(i)
     return 1
   end
 
-  return fibonacci_2(i-2) + fibonacci_2(i-1)
+  return fibonacci_2(i - 2) + fibonacci_2(i - 1)
 end
 
 # 末尾再帰版
@@ -113,7 +113,7 @@ def fibonacci_3(i)
       return previous + current
     end
 
-    return fib(x-1, current, previous + current)
+    return fib(x - 1, current, previous + current)
   end
   return fib(i, 1, 0)
 end
@@ -128,7 +128,7 @@ def fibonacci_4(i)
     if [1, 2].include?(x)
       return 1
     elsif !fib_dict.key?(x)
-      fib_dict[x] = fib(x-2) + fib(x-1)
+      fib_dict[x] = fib(x - 2) + fib(x - 1)
     end
 
     return fib_dict[x]
@@ -159,7 +159,7 @@ def factorial_2(n)
     return 1
   end
 
-  return n * factorial_2(n-1)
+  return n * factorial_2(n - 1)
 end
 
 # 末尾再帰版
@@ -173,7 +173,7 @@ def factorial_3(n)
       return product
     end
 
-    return fact(x-1, x * product)
+    return fact(x - 1, x * product)
   end
   return fact(n, 1)
 end
