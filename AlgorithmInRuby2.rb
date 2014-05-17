@@ -38,10 +38,10 @@ end
 
 # バブルソートアルゴリズムによりリストlistを昇順にソートする。
 def bubble_sort(list)
-  (0..list.length-1).each do |i|
-    (0..list.length-2 - i).each do |j|
-      if list[j] > list[j+1]
-        swap(list, j, j+1)
+  (0..list.length - 1).each do |i|
+    (0..list.length - 2 - i).each do |j|
+      if list[j] > list[j + 1]
+        swap(list, j, j + 1)
       end
     end
   end
@@ -51,9 +51,9 @@ end
 
 # セレクションソートアルゴリズムによりリストlistを昇順にソートする。
 def selection_sort(list)
-  (0..list.length-2).each do |first|
+  (0..list.length - 2).each do |first|
     min = first
-    (first+1..list.length-1).each do |i|
+    (first + 1..list.length - 1).each do |i|
       if list[i] < list[min]
         min = i
       end
@@ -66,7 +66,7 @@ end
 
 # クイックソートアルゴリズムによりリストlistを昇順にソートする。
 def quick_sort(list)
-  return q_sort(list, 0, list.length-1)
+  return q_sort(list, 0, list.length - 1)
 end
 
 def q_sort(list, left, right)
@@ -77,7 +77,7 @@ def q_sort(list, left, right)
   pivot = (left + right) / 2
   swap(list, left, pivot)
   last = left
-  (left+1..right).each do |i|
+  (left + 1..right).each do |i|
     if list[i] < list[left]
       last += 1
       swap(list, i, last)
@@ -85,8 +85,8 @@ def q_sort(list, left, right)
   end
   swap(list, left, last)
 
-  q_sort(list, left, last-1)
-  q_sort(list, last+1, right)
+  q_sort(list, left, last - 1)
+  q_sort(list, last + 1, right)
 
   return list
 end
