@@ -17,7 +17,7 @@ isPrime :: Int -> Bool
 isPrime n
     | n < 2     = False
     | otherwise = all (\x -> n `mod` x /= 0) [2..stopPoint]
-        where stopPoint = floor . sqrt $ fromIntegral n
+        where stopPoint = floor . sqrt $ (fromIntegral n :: Double)
 
 -- ユークリッドの互除法により整数a, bの最大公約数を算出する。
 -- a, bが0以下の場合、Nothingを返却する。
@@ -75,7 +75,7 @@ fibonacci3 i = Nothing
 fibonacci4 :: Int -> Maybe Integer
 fibonacci4 i
     | i < 1     = Nothing
-    | otherwise = Just $ map fib [0..] !! i
+    | otherwise = Just $ map fib [(0 :: Int)..] !! i
         where fib 1 = 1
               fib 2 = 1
               fib x = fib (x - 2) + fib (x - 1)
