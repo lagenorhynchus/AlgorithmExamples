@@ -193,5 +193,5 @@ def factorial_5(n)
     return nil
   end
 
-  return (2..n).inject(1, :+)
+  return (2..n).inject(1, :*)
 end
