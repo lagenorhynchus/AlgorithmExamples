@@ -68,8 +68,10 @@ fibonacci2 i
 
 -- ループ版
 fibonacci3 :: Int -> Maybe Integer
-fibonacci3 i = Nothing
--- TODO: ロジックを実装
+fibonacci3 i
+    | i < 1     = Nothing
+    | otherwise = Just . snd $ iterate fib (1, 0) !! i
+    where fib (prev, curr) = (curr, prev + curr)
 
 -- 再帰(メモ化)版
 fibonacci4 :: Int -> Maybe Integer
@@ -83,36 +85,38 @@ fibonacci4 i
 -- 整数nの階乗n!の値を算出する。
 -- nが負の数の場合、Nothingを返却する。
 -- 再帰版
-factorial :: Integer -> Maybe Integer
+factorial :: Int -> Maybe Integer
 factorial n
     | n < 0     = Nothing
-    | otherwise = Just $ fact n
+    | otherwise = Just $ fact (fromIntegral n)
     where fact 0 = 1
           fact 1 = 1
           fact x = x * fact (x - 1)
 
 -- 末尾再帰版
-factorial2 :: Integer -> Maybe Integer
+factorial2 :: Int -> Maybe Integer
 factorial2 n
     | n < 0     = Nothing
-    | otherwise = Just $ fact n 1
+    | otherwise = Just $ fact (fromIntegral n) 1
     where fact 0 prod = prod
           fact 1 prod = prod
           fact x prod = fact (x - 1) (x * prod)
 
 -- ループ版
-factorial3 :: Integer -> Maybe Integer
-factorial3 n = Nothing
--- TODO: ロジックを実装
+factorial3 :: Int -> Maybe Integer
+factorial3 n
+    | n < 0     = Nothing
+    | otherwise = Just . snd $ iterate fact (1, 1) !! n
+    where fact (x, prod) = (x + 1, x * prod)
 
 -- 畳み込み版
-factorial4 :: Integer -> Maybe Integer
+factorial4 :: Int -> Maybe Integer
 factorial4 n
     | n < 0     = Nothing
-    | otherwise = Just $ foldl (*) 1 [2..n]
+    | otherwise = Just $ foldl (*) 1 [2..(fromIntegral n)]
 
 -- 畳み込み版2
-factorial5 :: Integer -> Maybe Integer
+factorial5 :: Int -> Maybe Integer
 factorial5 n
     | n < 0     = Nothing
-    | otherwise = Just $ product [2..n]
+    | otherwise = Just $ product [2..(fromIntegral n)]
