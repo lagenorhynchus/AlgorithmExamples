@@ -41,9 +41,7 @@ def gcd(a, b)
   end
 
   while b > 0
-    r = a % b
-    a = b
-    b = r
+    a, b = b, (a % b)
   end
   return a
 end

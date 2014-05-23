@@ -39,8 +39,7 @@ def gcd(a, b):
         return None
 
     while b > 0:
-        r = a % b
-        a, b = b, r
+        a, b = b, (a % b)
     return a
 
 
