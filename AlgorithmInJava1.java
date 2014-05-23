@@ -55,7 +55,7 @@ public class AlgorithmInJava1 {
      * iが0以下の場合、nullを返却する。
      * ループ版
      */
-    public static Integer fibonacci(int i) {
+    public static Long fibonacci(int i) {
         // TODO: ロジックを実装
         return null;
     }
@@ -63,7 +63,7 @@ public class AlgorithmInJava1 {
     /*
      * 再帰版
      */
-    public static Integer fibonacci2(int i) {
+    public static Long fibonacci2(int i) {
         // TODO: ロジックを実装
         return null;
     }
@@ -71,7 +71,7 @@ public class AlgorithmInJava1 {
     /*
      * 末尾再帰版
      */
-    public static Integer fibonacci3(int i) {
+    public static Long fibonacci3(int i) {
         // TODO: ロジックを実装
         return null;
     }
@@ -79,7 +79,7 @@ public class AlgorithmInJava1 {
     /*
      * 再帰(メモ化)版
      */
-    public static Integer fibonacci4(int i) {
+    public static Long fibonacci4(int i) {
         // TODO: ロジックを実装
         return null;
     }
@@ -89,7 +89,7 @@ public class AlgorithmInJava1 {
      * nが負の数の場合、nullを返却する。
      * ループ版
      */
-    public static Integer factorial(int n) {
+    public static Long factorial(int n) {
         // TODO: ロジックを実装
         return null;
     }
@@ -97,7 +97,7 @@ public class AlgorithmInJava1 {
     /*
      * 再帰版
      */
-    public static Integer factorial2(int n) {
+    public static Long factorial2(int n) {
         // TODO: ロジックを実装
         return null;
     }
@@ -105,7 +105,7 @@ public class AlgorithmInJava1 {
     /*
      * 末尾再帰版
      */
-    public static Integer factorial3(int n) {
+    public static Long factorial3(int n) {
         // TODO: ロジックを実装
         return null;
     }
@@ -113,7 +113,7 @@ public class AlgorithmInJava1 {
     /*
      * 畳み込み版
      */
-    public static Integer factorial4(int n) {
+    public static Long factorial4(int n) {
         // TODO: ロジックを実装
         return null;
     }
@@ -121,7 +121,7 @@ public class AlgorithmInJava1 {
     /*
      * 畳み込み版2
      */
-    public static Integer factorial5(int n) {
+    public static Long factorial5(int n) {
         // TODO: ロジックを実装
         return null;
     }
