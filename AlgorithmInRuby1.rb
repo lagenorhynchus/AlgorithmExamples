@@ -81,8 +81,8 @@ def fibonacci(i)
     return nil
   end
 
-  current = 0
   previous = 1
+  current = 0
   i.times do
     previous, current = current, (previous + current)
   end
