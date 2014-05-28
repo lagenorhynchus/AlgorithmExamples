@@ -11,7 +11,12 @@ public class AlgorithmInJava2 {
      * リスト内に該当する要素がない場合、-1を返却する。
      */
     public static int sequentialSearch(List<Integer> list, Integer target) {
-        // TODO: ロジックを実装
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) == target) {
+                return i;
+            }
+        }
+
         return -1;
     }
 
@@ -20,7 +25,19 @@ public class AlgorithmInJava2 {
      * リスト内に該当する要素がない場合、-1を返却する。
      */
     public static int binarySearch(List<Integer> list, Integer target) {
-        // TODO: ロジックを実装
+        int low = 0;
+        int high = list.size() - 1;
+        while (low <= high) {
+            int middle = (low + high) / 2;
+            if (list.get(middle) > target) {
+                high = middle - 1;
+            } else if (list.get(middle) < target) {
+                low = middle + 1;
+            } else {
+                return middle;
+            }
+        }
+
         return -1;
     }
 
@@ -28,7 +45,14 @@ public class AlgorithmInJava2 {
      * バブルソートアルゴリズムによりリストlistを昇順にソートする。
      */
     public static List<Integer> bubbleSort(List<Integer> list) {
-        // TODO: ロジックを実装
+        for (int i = 0; i < list.size(); i++) {
+            for (int j = 0; j < list.size() - 1 - i; j++) {
+                if (list.get(j) > list.get(j + 1)) {
+                    swap(list, j, j + 1);
+                }
+            }
+        }
+
         return  list;
     }
 
@@ -36,7 +60,16 @@ public class AlgorithmInJava2 {
      * セレクションソートアルゴリズムによりリストlistを昇順にソートする。
      */
     public static List<Integer> selectionSort(List<Integer> list) {
-        // TODO: ロジックを実装
+        for (int first = 0; first < list.size() - 1; first++) {
+            int min = first;
+            for (int i = first + 1; i < list.size(); i++) {
+                if (list.get(i) < list.get(min)) {
+                    min = i;
+                }
+            }
+            swap(list, first, min);
+        }
+
         return list;
     }
 
@@ -46,5 +79,11 @@ public class AlgorithmInJava2 {
     public static List<Integer> quickSort(List<Integer> list) {
         // TODO: ロジックを実装
         return list;
+    }
+
+    private static void swap(List<Integer> list, int x, int y) {
+        int tmp = list.get(x);
+        list.set(x, list.get(y));
+        list.set(y, tmp);
     }
 }
