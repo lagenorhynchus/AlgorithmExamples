@@ -94,8 +94,8 @@ public class AlgorithmInJava1 {
             return null;
         }
 
-        long current = 0L;
         long previous = 1L;
+        long current = 0L;
         for (int j = 0; j < i; j++) {
             long tmp = previous;
             previous = current;
