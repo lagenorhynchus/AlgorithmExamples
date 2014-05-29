@@ -14,7 +14,7 @@ var isPrime = function (n) {
 };
 
 // ユークリッドの互除法により整数a, bの最大公約数を算出する。
-// a, bが0以下の場合、nullを返却する。
+// a, bが1未満の場合、nullを返却する。
 // 除算版
 var gcd = function (a, b) {
     // TODO: ロジックを実装
@@ -28,14 +28,14 @@ var gcd2 = function (a, b) {
 };
 
 // 整数a, bの最小公倍数を算出する。
-// a, bが0以下の場合、nullを返却する。
+// a, bが1未満の場合、nullを返却する。
 var lcm = function (a, b) {
     // TODO: ロジックを実装
     return null;
 };
 
 // フィボナッチ数列の第i項の値を算出する。
-// iが0以下の場合、nullを返却する。
+// iが1未満の場合、nullを返却する。
 // ループ版
 var fibonacci = function (i) {
     // TODO: ロジックを実装

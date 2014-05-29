@@ -32,7 +32,7 @@ def is_prime(n):
 
 
 # ユークリッドの互除法により整数a, bの最大公約数を算出する。
-# a, bが0以下の場合、Noneを返却する。
+# a, bが1未満の場合、Noneを返却する。
 # 除算版
 def gcd(a, b):
     if a < 1 or b < 1:
@@ -58,7 +58,7 @@ def gcd_2(a, b):
 
 
 # 整数a, bの最小公倍数を算出する。
-# a, bが0以下の場合、Noneを返却する。
+# a, bが1未満の場合、Noneを返却する。
 def lcm(a, b):
     if a < 1 or b < 1:
         return None
@@ -67,7 +67,7 @@ def lcm(a, b):
 
 
 # フィボナッチ数列の第i項の値を算出する。
-# iが0以下の場合、Noneを返却する。
+# iが1未満の場合、Noneを返却する。
 # ループ版
 def fibonacci(i):
     if i < 1:

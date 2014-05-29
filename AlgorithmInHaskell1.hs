@@ -20,7 +20,7 @@ isPrime n
     where stopPoint = floor . sqrt $ (fromIntegral n :: Double)
 
 -- ユークリッドの互除法により整数a, bの最大公約数を算出する。
--- a, bが0以下の場合、Nothingを返却する。
+-- a, bが1未満の場合、Nothingを返却する。
 -- 除算版
 gcd' :: Int -> Int -> Maybe Int
 gcd' a b
@@ -41,14 +41,14 @@ gcd2 a b
               | otherwise = Just x
 
 -- 整数a, bの最小公倍数を算出する。
--- a, bが0以下の場合、Nothingを返却する。
+-- a, bが1未満の場合、Nothingを返却する。
 lcm' :: Int -> Int -> Maybe Int
 lcm' a b
     | a < 1 || b < 1 = Nothing
     | otherwise      = fmap (div $ a * b) (gcd' a b)
 
 -- フィボナッチ数列の第i項の値を算出する。
--- iが0以下の場合、Nothingを返却する。
+-- iが1未満の場合、Nothingを返却する。
 -- 再帰版
 fibonacci :: Int -> Maybe Integer
 fibonacci i

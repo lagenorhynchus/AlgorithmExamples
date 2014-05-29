@@ -37,7 +37,7 @@ public class AlgorithmInJava1 {
 
     /*
      * ユークリッドの互除法により整数a, bの最大公約数を算出する。
-     * a, bが0以下の場合、nullを返却する。
+     * a, bが1未満の場合、nullを返却する。
      * 除算版
      */
     public static Integer gcd(int a, int b) {
@@ -74,7 +74,7 @@ public class AlgorithmInJava1 {
 
     /*
      * 整数a, bの最小公倍数を算出する。
-     * a, bが0以下の場合、nullを返却する。
+     * a, bが1未満の場合、nullを返却する。
      */
     public static Integer lcm(int a, int b) {
         if (a < 1 || b < 1) {
@@ -86,7 +86,7 @@ public class AlgorithmInJava1 {
 
     /*
      * フィボナッチ数列の第i項の値を算出する。
-     * iが0以下の場合、nullを返却する。
+     * iが1未満の場合、nullを返却する。
      * ループ版
      */
     public static Long fibonacci(int i) {
