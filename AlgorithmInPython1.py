@@ -150,7 +150,7 @@ def factorial_3(n):
         if x in [0, 1]:
             return product
 
-        return fact(x - 1, x * product)
+        return fact(x - 1, product * x)
     return fact(n, 1)
 
 

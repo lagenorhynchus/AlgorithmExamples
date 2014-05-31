@@ -122,14 +122,14 @@ def fibonacci_4(i)
     return nil
   end
 
-  def fib(x, fib_dict = {})
+  def fib(x, fib_hash = {})
     if [1, 2].include?(x)
       return 1
-    elsif !fib_dict.key?(x)
-      fib_dict[x] = fib(x - 2) + fib(x - 1)
+    elsif !fib_hash.key?(x)
+      fib_hash[x] = fib(x - 2) + fib(x - 1)
     end
 
-    return fib_dict[x]
+    return fib_hash[x]
   end
   return fib(i)
 end
@@ -171,7 +171,7 @@ def factorial_3(n)
       return product
     end
 
-    return fact(x - 1, x * product)
+    return fact(x - 1, product * x)
   end
   return fact(n, 1)
 end
