@@ -5,6 +5,7 @@
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 
 public class AlgorithmInJava1 {
@@ -23,6 +24,7 @@ public class AlgorithmInJava1 {
 
     /*
      * 整数nが素数かどうかを判定する。
+     * ループ版
      */
     public static boolean isPrime(int n) {
         if (n < 2) {
@@ -37,6 +39,19 @@ public class AlgorithmInJava1 {
         }
 
         return true;
+    }
+
+    /*
+     * ストリーム版
+     */
+    public static boolean isPrime2(int n) {
+        if (n < 2) {
+            return false;
+        }
+
+        int stopPoint = (int) Math.sqrt(n);
+        return IntStream.rangeClosed(2, stopPoint)
+            .allMatch(i -> n % i != 0);
     }
 
     /*
