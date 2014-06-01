@@ -3,6 +3,10 @@
  * author: OHASHI Kent
  */
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.LongStream;
+
 public class AlgorithmInJava1 {
     /*
      * 西暦年yearが閏年かどうかを判定する。
@@ -121,16 +125,40 @@ public class AlgorithmInJava1 {
      * 末尾再帰版
      */
     public static Long fibonacci3(int i) {
-        // TODO: ロジックを実装
-        return null;
+        if (i < 1) {
+            return null;
+        }
+
+        return fib(i, 1L, 0L);
+    }
+
+    private static long fib(int x, long previous, long current) {
+        if (x == 1) {
+            return previous + current;
+        }
+
+        return fib(x - 1, current, previous + current);
     }
 
     /*
      * 再帰(メモ化)版
      */
     public static Long fibonacci4(int i) {
-        // TODO: ロジックを実装
-        return null;
+        if (i < 1) {
+            return null;
+        }
+
+        return fib2(i, new HashMap<>());
+    }
+
+    private static long fib2(int x, Map<Integer, Long> fibMap) {
+        if (x == 1 || x == 2) {
+            return 1L;
+        } else if (!fibMap.containsKey(x)) {
+            fibMap.put(x, fib2(x - 2, fibMap) + fib2(x - 1, fibMap));
+        }
+
+        return fibMap.get(x);
     }
 
     /*
@@ -167,23 +195,30 @@ public class AlgorithmInJava1 {
      * 末尾再帰版
      */
     public static Long factorial3(int n) {
-        // TODO: ロジックを実装
-        return null;
+        if (n < 0) {
+            return null;
+        }
+
+        return fact(n, 1L);
+    }
+
+    private static long fact(int x, long product) {
+        if (x == 0 || x == 1) {
+            return product;
+        }
+
+        return fact(x - 1, product * x);
     }
 
     /*
      * 畳み込み版
      */
     public static Long factorial4(int n) {
-        // TODO: ロジックを実装
-        return null;
-    }
+        if (n < 0) {
+            return null;
+        }
 
-    /*
-     * 畳み込み版2
-     */
-    public static Long factorial5(int n) {
-        // TODO: ロジックを実装
-        return null;
+        return LongStream.rangeClosed(2, n)
+            .reduce(1L, (product, i) -> product * i);
     }
 }
