@@ -13,6 +13,7 @@ var isLeapYear = function (year) {
 };
 
 // 整数nが素数かどうかを判定する。
+// 標準機能版
 var isPrime = function (n) {
     var stopPoint = 0;
     var i = 0;
@@ -22,13 +23,27 @@ var isPrime = function (n) {
     }
 
     stopPoint = Math.floor(Math.sqrt(n));
-    for (i = 2; i <= stopPoint; i++) {
+    for (i = 2; i <= stopPoint; i += 1) {
         if (n % i === 0) {
             return false;
         }
     }
 
     return true;
+};
+
+// Underscore.js版
+var isPrime2 = function (n) {
+    var stopPoint = 0;
+
+    if (n < 2) {
+        return false;
+    }
+
+    stopPoint = Math.floor(Math.sqrt(n));
+    return _.every(_.range(2, stopPoint + 1), function (i) {
+        return n % i !== 0;
+    });
 };
 
 // ユークリッドの互除法により整数a, bの最大公約数を算出する。
@@ -89,7 +104,7 @@ var fibonacci = function (i) {
         return null;
     }
 
-    for (j = 0; j < i; j++) {
+    for (j = 0; j < i; j += 1) {
         tmp = previous;
         previous = current;
         current = tmp + current;
@@ -110,14 +125,38 @@ var fibonacci2 = function (i) {
 
 // 末尾再帰版
 var fibonacci3 = function (i) {
-    // TODO: ロジックを実装
-    return null;
+    if (i < 1) {
+        return null;
+    }
+
+    var fib = function (x, previous, current) {
+        if (x === 1) {
+            return previous + current;
+        }
+
+        return fib(x - 1, current, previous + current);
+    };
+    return fib(i, 1, 0);
 };
 
 // 再帰(メモ化)版
 var fibonacci4 = function (i) {
-    // TODO: ロジックを実装
-    return null;
+    var fibList = [];
+
+    if (i < 1) {
+        return null;
+    }
+
+    var fib = function (x) {
+        if (x === 1 || x === 2) {
+            return 1;
+        } else if (typeof fibList[x] !== "number") {
+            fibList[x] = fib(x - 2) + fib(x - 1);
+        }
+
+        return fibList[x];
+    };
+    return fib(i);
 };
 
 // 整数nの階乗n!の値を算出する。
@@ -131,7 +170,7 @@ var factorial = function (n) {
         return null;
     }
 
-    for (i = 2; i <= n; i++) {
+    for (i = 2; i <= n; i += 1) {
         product *= i;
     }
     return product;
@@ -150,18 +189,27 @@ var factorial2 = function (n) {
 
 // 末尾再帰版
 var factorial3 = function (n) {
-    // TODO: ロジックを実装
-    return null;
+    if (n < 0) {
+        return null;
+    }
+
+    var fact = function (x, product) {
+        if (x === 0 || x === 1) {
+            return product;
+        }
+
+        return fact(x - 1, product * x);
+    };
+    return fact(n, 1);
 };
 
 // 畳み込み版
 var factorial4 = function (n) {
-    // TODO: ロジックを実装
-    return null;
-};
+    if (n < 0) {
+        return null;
+    }
 
-// 畳み込み版2
-var factorial5 = function (n) {
-    // TODO: ロジックを実装
-    return null;
+    return _.reduce(_.range(2, n + 1), function (product, i) {
+        return product * i;
+    }, 1);
 };
