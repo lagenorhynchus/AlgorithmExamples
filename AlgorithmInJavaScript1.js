@@ -125,10 +125,6 @@ var fibonacci2 = function (i) {
 
 // 末尾再帰版
 var fibonacci3 = function (i) {
-    if (i < 1) {
-        return null;
-    }
-
     var fib = function (x, previous, current) {
         if (x === 1) {
             return previous + current;
@@ -136,17 +132,17 @@ var fibonacci3 = function (i) {
 
         return fib(x - 1, current, previous + current);
     };
+
+    if (i < 1) {
+        return null;
+    }
+
     return fib(i, 1, 0);
 };
 
 // 再帰(メモ化)版
 var fibonacci4 = function (i) {
     var fibList = [];
-
-    if (i < 1) {
-        return null;
-    }
-
     var fib = function (x) {
         if (x === 1 || x === 2) {
             return 1;
@@ -156,6 +152,11 @@ var fibonacci4 = function (i) {
 
         return fibList[x];
     };
+
+    if (i < 1) {
+        return null;
+    }
+
     return fib(i);
 };
 
@@ -189,10 +190,6 @@ var factorial2 = function (n) {
 
 // 末尾再帰版
 var factorial3 = function (n) {
-    if (n < 0) {
-        return null;
-    }
-
     var fact = function (x, product) {
         if (x === 0 || x === 1) {
             return product;
@@ -200,6 +197,11 @@ var factorial3 = function (n) {
 
         return fact(x - 1, product * x);
     };
+
+    if (n < 0) {
+        return null;
+    }
+
     return fact(n, 1);
 };
 
