@@ -17,6 +17,7 @@ def leap_year?(year)
 end
 
 # 整数nが素数かどうかを判定する。
+# ループ版
 def prime?(n)
   if n < 2
     return false
@@ -30,6 +31,16 @@ def prime?(n)
   end
 
   return true
+end
+
+# 高階関数版
+def prime_2?(n)
+  if n < 2
+    return false
+  end
+
+  stop_point = Math.sqrt(n).to_i
+  return (2..stop_point).all? {|i| n % i != 0}
 end
 
 # ユークリッドの互除法により整数a, bの最大公約数を算出する。

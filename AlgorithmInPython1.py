@@ -19,6 +19,7 @@ def is_leap_year(year):
 
 
 # 整数nが素数かどうかを判定する。
+# ループ版
 def is_prime(n):
     if n < 2:
         return False
@@ -29,6 +30,15 @@ def is_prime(n):
             return False
 
     return True
+
+
+# 組み込み関数版
+def is_prime_2(n):
+    if n < 2:
+        return False
+
+    stop_point = int(sqrt(n))
+    return all(n % i != 0 for i in range(2, stop_point + 1))
 
 
 # ユークリッドの互除法により整数a, bの最大公約数を算出する。
