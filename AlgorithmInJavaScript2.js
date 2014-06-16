@@ -4,10 +4,10 @@
 // 逐次探索アルゴリズムによりリストlistの指定した要素targetの位置を取得する。
 // リスト内に該当する要素がない場合、-1を返却する。
 var sequentialSearch = function (list, target) {
-    var i = 0;
-    var len = 0;
+    var i;
+    var len = list.length;
 
-    for (i = 0, len = list.length; i < len; i += 1) {
+    for (i = 0; i < len; i += 1) {
         if (list[i] === target) {
             return i;
         }
@@ -21,10 +21,10 @@ var sequentialSearch = function (list, target) {
 var binarySearch = function (list, target) {
     var low = 0;
     var high = list.length - 1;
-    var middle = 0;
+    var middle;
 
     while (low <= high) {
-        middle = (low + high) / 2;
+        middle = Math.floor((low + high) / 2);
         if (list[middle] > target) {
             high = middle - 1;
         } else if (list[middle] < target) {
@@ -39,7 +39,18 @@ var binarySearch = function (list, target) {
 
 // バブルソートアルゴリズムによりリストlistを昇順にソートする。
 var bubbleSort = function (list) {
-    // TODO: ロジックを実装
+    var i;
+    var j;
+    var len = list.length;
+
+    list = list.concat();
+    for (i = 0; i < len; i++) {
+        for (j = 0; j < len - i - 1; j++) {
+            if (list[j] > list[j + 1]) {
+                swap(list, j, j + 1);
+            }
+        }
+    }
     return list;
 };
 

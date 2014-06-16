@@ -15,8 +15,8 @@ var isLeapYear = function (year) {
 // 整数nが素数かどうかを判定する。
 // 標準機能版
 var isPrime = function (n) {
-    var stopPoint = 0;
-    var i = 0;
+    var stopPoint;
+    var i;
 
     if (n < 2) {
         return false;
@@ -34,7 +34,7 @@ var isPrime = function (n) {
 
 // Underscore.js版
 var isPrime2 = function (n) {
-    var stopPoint = 0;
+    var stopPoint;
 
     if (n < 2) {
         return false;
@@ -50,7 +50,7 @@ var isPrime2 = function (n) {
 // a, bが1未満の場合、nullを返却する。
 // 除算版
 var gcd = function (a, b) {
-    var r = 0;
+    var r;
 
     if (a < 1 || b < 1) {
         return null;
@@ -97,8 +97,8 @@ var lcm = function (a, b) {
 var fibonacci = function (i) {
     var previous = 1;
     var current = 0;
-    var j = 0;
-    var tmp = 0;
+    var j;
+    var tmp;
 
     if (i < 1) {
         return null;
@@ -165,7 +165,7 @@ var fibonacci4 = function (i) {
 // ループ版
 var factorial = function (n) {
     var product = 1;
-    var i = 0;
+    var i;
 
     if (n < 0) {
         return null;
