@@ -33,8 +33,13 @@ def binary_search(lst, target):
 
 # バブルソートアルゴリズムによりリストlstを昇順にソートする。
 def bubble_sort(lst):
-    # TODO: ロジックを実装
-    pass
+    lst = lst[:]
+    for i in range(0, len(lst)):
+        for j in range(0, len(lst) - i - 1):
+            if lst[j] > lst[j + 1]:
+                swap(lst, j, j + 1)
+
+    return lst
 
 
 # セレクションソートアルゴリズムによりリストlstを昇順にソートする。

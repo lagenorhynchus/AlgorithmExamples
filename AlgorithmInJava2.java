@@ -3,6 +3,7 @@
  * author: OHASHI Kent
  */
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AlgorithmInJava2 {
@@ -45,8 +46,9 @@ public class AlgorithmInJava2 {
      * バブルソートアルゴリズムによりリストlistを昇順にソートする。
      */
     public static List<Integer> bubbleSort(List<Integer> list) {
+        list = new ArrayList<Integer>(list);
         for (int i = 0; i < list.size(); i++) {
-            for (int j = 0; j < list.size() - 1 - i; j++) {
+            for (int j = 0; j < list.size() - i - 1; j++) {
                 if (list.get(j) > list.get(j + 1)) {
                     swap(list, j, j + 1);
                 }
@@ -60,6 +62,7 @@ public class AlgorithmInJava2 {
      * セレクションソートアルゴリズムによりリストlistを昇順にソートする。
      */
     public static List<Integer> selectionSort(List<Integer> list) {
+        list = new ArrayList<Integer>(list);
         for (int first = 0; first < list.size() - 1; first++) {
             int min = first;
             for (int i = first + 1; i < list.size(); i++) {

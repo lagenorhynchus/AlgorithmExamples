@@ -38,8 +38,9 @@ end
 
 # バブルソートアルゴリズムによりリストlistを昇順にソートする。
 def bubble_sort(list)
+  list = list.dup
   (0..list.length - 1).each do |i|
-    (0..list.length - 2 - i).each do |j|
+    (0..list.length - i - 2).each do |j|
       if list[j] > list[j + 1]
         swap(list, j, j + 1)
       end
@@ -51,6 +52,7 @@ end
 
 # セレクションソートアルゴリズムによりリストlistを昇順にソートする。
 def selection_sort(list)
+  list = list.dup
   (0..list.length - 2).each do |first|
     min = first
     (first + 1..list.length - 1).each do |i|
@@ -66,6 +68,7 @@ end
 
 # クイックソートアルゴリズムによりリストlistを昇順にソートする。
 def quick_sort(list)
+  list = list.dup
   return q_sort(list, 0, list.length - 1)
 end
 
