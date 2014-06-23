@@ -27,7 +27,7 @@ gcd' a b
     | a < 1 || b < 1 = Nothing
     | otherwise      = divide a b
     where divide x y
-              | y <= 0    = Just x
+              | y == 0    = Just x
               | otherwise = divide y (x `mod` y)
 
 -- 減算版
