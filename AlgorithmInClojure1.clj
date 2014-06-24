@@ -66,8 +66,8 @@
     (letfn [(fib [x prev curr]
               (if (= x 1)
                 (+ prev curr)
-                (recur (dec x) curr (bigint (+ prev curr)))))]
-      (fib i 1 0))))
+                (recur (dec x) curr (+ prev curr))))]
+      (fib i 1N 0N))))
 
 ;;; ループ版
 (defn fibonacci-3 [i]
@@ -100,8 +100,8 @@
               (cond
                 (= x 0) prod
                 (= x 1) prod
-                :else   (recur (dec x) (bigint (* x prod)))))]
-      (fact n 1))))
+                :else   (recur (dec x) (* x prod))))]
+      (fact n 1N))))
 
 ;;; ループ版
 (defn factorial-3 [n]
