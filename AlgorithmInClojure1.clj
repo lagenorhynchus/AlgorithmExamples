@@ -71,8 +71,13 @@
 
 ;;; ループ版
 (defn fibonacci-3 [i]
-  ;; TODO: ロジックを実装
-  nil)
+  (if (< i 1)
+    nil
+    (letfn [(fib [prev-curr]
+              (let [prev (first prev-curr)
+                    curr (second prev-curr)]
+                [curr (+ prev curr)]))]
+      (second (nth (iterate fib [1N 0N]) i)))))
 
 ;;; 再帰(メモ化)版
 (defn fibonacci-4 [i]
@@ -105,15 +110,22 @@
 
 ;;; ループ版
 (defn factorial-3 [n]
-  ;; TODO: ロジックを実装
-  nil)
+  (if (< n 0)
+    nil
+    (letfn [(fact [x-prod]
+              (let [x    (first x-prod)
+                    prod (second x-prod)]
+                [(inc x) (* x prod)]))]
+      (second (nth (iterate fact [1N 1N]) n)))))
 
 ;;; 畳み込み版
 (defn factorial-4 [n]
-  ;; TODO: ロジックを実装
-  nil)
+  (if (< n 0)
+    nil
+    (reduce * 1N (range 2N (inc n)))))
 
 ;;; 畳み込み版2
 (defn factorial-5 [n]
-  ;; TODO: ロジックを実装
-  nil)
+  (if (< n 0)
+    nil
+    (apply * (range 2N (inc n)))))
