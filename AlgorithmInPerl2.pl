@@ -13,7 +13,6 @@ sub sequential_search {
     return undef;
 }
 
-
 # 二分探索アルゴリズムによりソート済みリストlistの指定した要素targetの位置を取得する。
 # リスト内に該当する要素がない場合、undefを返却する。
 sub binary_search {
@@ -21,13 +20,11 @@ sub binary_search {
     return undef;
 }
 
-
 # バブルソートアルゴリズムによりリストlistを昇順にソートする。
 sub bubble_sort {
     my (@list) = @_;
     return @list;
 }
-
 
 # セレクションソートアルゴリズムによりリストlistを昇順にソートする。
 sub selection_sort {
@@ -35,18 +32,15 @@ sub selection_sort {
     return @list;
 }
 
-
 # クイックソートアルゴリズムによりリストlistを昇順にソートする。
 sub quick_sort {
     my (@list) = @_;
     return @list;
 }
 
-
 sub q_sort {
     my ($list, $left, $right) = @_;
 }
-
 
 sub swap {
     my ($list, $x, $y) = @_;
