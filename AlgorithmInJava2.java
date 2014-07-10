@@ -3,6 +3,8 @@
  * author: OHASHI Kent
  */
 
+import static java.util.Collections.swap;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -82,11 +84,5 @@ public class AlgorithmInJava2 {
     public static List<Integer> quickSort(List<Integer> list) {
         // TODO: ロジックを実装
         return list;
-    }
-
-    private static void swap(List<Integer> list, int x, int y) {
-        int tmp = list.get(x);
-        list.set(x, list.get(y));
-        list.set(y, tmp);
     }
 }
