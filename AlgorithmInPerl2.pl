@@ -10,6 +10,8 @@ use warnings;
 # リスト内に該当する要素がない場合、undefを返却する。
 sub sequential_search {
     my ($list, $target) = @_;
+
+    # TODO: ロジックを実装
     return undef;
 }
 
@@ -17,29 +19,39 @@ sub sequential_search {
 # リスト内に該当する要素がない場合、undefを返却する。
 sub binary_search {
     my ($list, $target) = @_;
+
+    # TODO: ロジックを実装
     return undef;
 }
 
 # バブルソートアルゴリズムによりリストlistを昇順にソートする。
 sub bubble_sort {
     my (@list) = @_;
+
+    # TODO: ロジックを実装
     return @list;
 }
 
 # セレクションソートアルゴリズムによりリストlistを昇順にソートする。
 sub selection_sort {
     my (@list) = @_;
+
+    # TODO: ロジックを実装
     return @list;
 }
 
 # クイックソートアルゴリズムによりリストlistを昇順にソートする。
 sub quick_sort {
     my (@list) = @_;
+
+    # TODO: ロジックを実装
     return @list;
 }
 
 sub q_sort {
     my ($list, $left, $right) = @_;
+
+    # TODO: ロジックを実装
 }
 
 sub swap {
