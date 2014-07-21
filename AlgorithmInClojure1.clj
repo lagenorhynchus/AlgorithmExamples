@@ -1,6 +1,8 @@
 ;;;; 数値計算のアルゴリズム
 ;;;; author: OHASHI Kent
 
+(ns AlgorithmInClojure1)
+
 ;;; 西暦年yearが閏年かどうかを判定する。
 (defn leap-year? [year]
   (cond

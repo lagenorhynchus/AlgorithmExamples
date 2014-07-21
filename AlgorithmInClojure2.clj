@@ -1,6 +1,8 @@
 ;;;; リストの探索とソートのアルゴリズム
 ;;;; author: OHASHI Kent
 
+(ns AlgorithmInClojure2)
+
 ;;; 逐次探索アルゴリズムによりリストlstの指定した要素targetの位置を取得する。
 ;;; リスト内に該当する要素がない場合、nilを返却する。
 (defn sequential-search [lst target]
