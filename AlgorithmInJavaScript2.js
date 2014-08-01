@@ -9,6 +9,30 @@ var AlgorithmInJavaScript2 = (function () {
     list[y] = tmp;
   };
 
+  var qSort = function (list, left, right) {
+    var pivot = Math.floor((left + right) / 2);
+    var last = left;
+    var i;
+
+    if (right - left < 1) {
+      return list;
+    }
+
+    swap(list, left, pivot);
+    for (i = left + 1; i <= right; i += 1) {
+      if (list[i] < list[left]) {
+        last += 1;
+        swap(list, i, last);
+      }
+    }
+    swap(list, left, last);
+
+    qSort(list, left, last - 1);
+    qSort(list, last + 1, right);
+
+    return list;
+  };
+
   return {
     // 逐次探索アルゴリズムによりリストlistの指定した要素targetの位置を取得する。
     // リスト内に該当する要素がない場合、-1を返却する。
@@ -65,14 +89,28 @@ var AlgorithmInJavaScript2 = (function () {
 
     // セレクションソートアルゴリズムによりリストlistを昇順にソートする。
     selectionSort: function (list) {
-      // TODO: ロジックを実装
+      var first;
+      var min;
+      var i;
+      var len = list.length;
+
+      list = list.concat();
+      for (first = 0; first < len - 1; first += 1) {
+        min = first;
+        for (i = first + 1; i < len; i += 1) {
+          if (list[i] < list[min]) {
+            min = i;
+          }
+        }
+        swap(list, first, min);
+      }
       return list;
     },
 
     // クイックソートアルゴリズムによりリストlistを昇順にソートする。
     quickSort: function (list) {
-      // TODO: ロジックを実装
-      return list;
+      list = list.concat();
+      return  qSort(list, 0, list.length - 1);
     }
   };
 }());

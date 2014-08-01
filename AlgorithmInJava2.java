@@ -48,7 +48,7 @@ public class AlgorithmInJava2 {
    * バブルソートアルゴリズムによりリストlistを昇順にソートする。
    */
   public static List<Integer> bubbleSort(List<Integer> list) {
-    list = new ArrayList<Integer>(list);
+    list = new ArrayList<>(list);
     for (int i = 0; i < list.size(); i++) {
       for (int j = 0; j < list.size() - i - 1; j++) {
         if (list.get(j) > list.get(j + 1)) {
@@ -64,7 +64,7 @@ public class AlgorithmInJava2 {
    * セレクションソートアルゴリズムによりリストlistを昇順にソートする。
    */
   public static List<Integer> selectionSort(List<Integer> list) {
-    list = new ArrayList<Integer>(list);
+    list = new ArrayList<>(list);
     for (int first = 0; first < list.size() - 1; first++) {
       int min = first;
       for (int i = first + 1; i < list.size(); i++) {
@@ -82,7 +82,29 @@ public class AlgorithmInJava2 {
    * クイックソートアルゴリズムによりリストlistを昇順にソートする。
    */
   public static List<Integer> quickSort(List<Integer> list) {
-    // TODO: ロジックを実装
+    list = new ArrayList<>(list);
+    return  qSort(list, 0, list.size() - 1);
+  }
+
+  private static List<Integer> qSort(List<Integer> list, int left, int right) {
+    if (right - left < 1) {
+      return list;
+    }
+
+    int pivot = (left + right) / 2;
+    swap(list, left, pivot);
+    int last = left;
+    for (int i = left + 1; i <= right; i++) {
+      if (list.get(i) < list.get(left)) {
+        last++;
+        swap(list, i, last);
+      }
+    }
+    swap(list, left, last);
+
+    qSort(list, left, last - 1);
+    qSort(list, last + 1, right);
+
     return list;
   }
 }

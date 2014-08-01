@@ -44,19 +44,40 @@ def bubble_sort(lst):
 
 # セレクションソートアルゴリズムによりリストlstを昇順にソートする。
 def selection_sort(lst):
-    # TODO: ロジックを実装
-    pass
+    lst = lst[:]
+    for first in range(0, len(lst) - 1):
+        m = first
+        for i in range(first + 1, len(lst)):
+            if lst[i] < lst[m]:
+                m = i
+        swap(lst, first, m)
+
+    return lst
 
 
 # クイックソートアルゴリズムによりリストlstを昇順にソートする。
 def quick_sort(lst):
-    # TODO: ロジックを実装
-    pass
+    lst = lst[:]
+    return q_sort(lst, 0, len(lst) - 1)
 
 
 def q_sort(lst, left, right):
-    # TODO: ロジックを実装
-    pass
+    if right - left < 1:
+        return lst
+
+    pivot = (left + right) // 2
+    swap(lst, left, pivot)
+    last = left
+    for i in range(left + 1, right + 1):
+        if lst[i] < lst[left]:
+            last += 1
+            swap(lst, i, last)
+    swap(lst, left, last)
+
+    q_sort(lst, left, last - 1)
+    q_sort(lst, last + 1, right)
+
+    return lst
 
 
 def swap(lst, x, y):
