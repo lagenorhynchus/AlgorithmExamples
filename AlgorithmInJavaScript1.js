@@ -1,6 +1,8 @@
 // 数値計算のアルゴリズム
 // author: OHASHI Kent
 
+var _ = typeof require === "undefined" ? _ : require("underscore");
+
 var AlgorithmInJavaScript1 = (function () {
   return {
     // 西暦年yearが閏年かどうかを判定する。
