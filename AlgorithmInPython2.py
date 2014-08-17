@@ -37,7 +37,7 @@ def bubble_sort(lst):
     for i in range(0, len(lst)):
         for j in range(0, len(lst) - i - 1):
             if lst[j] > lst[j + 1]:
-                swap(lst, j, j + 1)
+                _swap(lst, j, j + 1)
 
     return lst
 
@@ -50,7 +50,7 @@ def selection_sort(lst):
         for i in range(first + 1, len(lst)):
             if lst[i] < lst[m]:
                 m = i
-        swap(lst, first, m)
+        _swap(lst, first, m)
 
     return lst
 
@@ -66,13 +66,13 @@ def q_sort(lst, left, right):
         return lst
 
     pivot = (left + right) // 2
-    swap(lst, left, pivot)
+    _swap(lst, left, pivot)
     last = left
     for i in range(left + 1, right + 1):
         if lst[i] < lst[left]:
             last += 1
-            swap(lst, i, last)
-    swap(lst, left, last)
+            _swap(lst, i, last)
+    _swap(lst, left, last)
 
     q_sort(lst, left, last - 1)
     q_sort(lst, last + 1, right)
@@ -80,5 +80,5 @@ def q_sort(lst, left, right):
     return lst
 
 
-def swap(lst, x, y):
+def _swap(lst, x, y):
     lst[x], lst[y] = lst[y], lst[x]
