@@ -58,10 +58,10 @@ def selection_sort(lst):
 # クイックソートアルゴリズムによりリストlstを昇順にソートする。
 def quick_sort(lst):
     lst = lst[:]
-    return q_sort(lst, 0, len(lst) - 1)
+    return _q_sort(lst, 0, len(lst) - 1)
 
 
-def q_sort(lst, left, right):
+def _q_sort(lst, left, right):
     if right - left < 1:
         return lst
 
@@ -74,8 +74,8 @@ def q_sort(lst, left, right):
             _swap(lst, i, last)
     _swap(lst, left, last)
 
-    q_sort(lst, left, last - 1)
-    q_sort(lst, last + 1, right)
+    _q_sort(lst, left, last - 1)
+    _q_sort(lst, last + 1, right)
 
     return lst
 
