@@ -117,7 +117,7 @@ var AlgorithmInJavaScript1 = (function () {
     },
 
     // 再帰版
-    fibonacci2: function (i) {
+    fibonacci2: function fibonacci2 (i) {
       if (i < 1) {
         return null;
       } else if (i === 1 || i === 2) {
@@ -129,7 +129,7 @@ var AlgorithmInJavaScript1 = (function () {
 
     // 末尾再帰版
     fibonacci3: function (i) {
-      var fib = function (x, previous, current) {
+      var fib = function fib (x, previous, current) {
         if (x === 1) {
           return previous + current;
         }
@@ -147,7 +147,7 @@ var AlgorithmInJavaScript1 = (function () {
     // 再帰(メモ化)版
     fibonacci4: function (i) {
       var fibList = [];
-      var fib = function (x) {
+      var fib = function fib (x) {
         if (x === 1 || x === 2) {
           return 1;
         } else if (typeof fibList[x] !== "number") {
@@ -182,7 +182,7 @@ var AlgorithmInJavaScript1 = (function () {
     },
 
     // 再帰版
-    factorial2: function (n) {
+    factorial2: function factorial2 (n) {
       if (n < 0) {
         return null;
       } else if (n === 0 || n === 1) {
@@ -194,7 +194,7 @@ var AlgorithmInJavaScript1 = (function () {
 
     // 末尾再帰版
     factorial3: function (n) {
-      var fact = function (x, product) {
+      var fact = function fact (x, product) {
         if (x === 0 || x === 1) {
           return product;
         }

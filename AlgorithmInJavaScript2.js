@@ -9,7 +9,7 @@ var AlgorithmInJavaScript2 = (function () {
     list[y] = tmp;
   };
 
-  var qSort = function (list, left, right) {
+  var qSort = function qSort (list, left, right) {
     var pivot = Math.floor((left + right) / 2);
     var last = left;
     var i;
