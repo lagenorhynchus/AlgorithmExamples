@@ -5,6 +5,8 @@ author: OHASHI Kent
 
 module AlgorithmInHaskell1 where
 
+import Data.List (foldl')
+
 -- 西暦年yearが閏年かどうかを判定する。
 isLeapYear :: Int -> Bool
 isLeapYear year
@@ -113,7 +115,7 @@ factorial3 n
 factorial4 :: Int -> Maybe Integer
 factorial4 n
     | n < 0     = Nothing
-    | otherwise = Just $ foldl (*) 1 [2..(fromIntegral n)]
+    | otherwise = Just $ foldl' (*) 1 [2..(fromIntegral n)]
 
 -- 畳み込み版2
 factorial5 :: Int -> Maybe Integer
