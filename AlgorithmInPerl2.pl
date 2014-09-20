@@ -6,19 +6,19 @@
 use strict;
 use warnings;
 
-# 逐次探索アルゴリズムによりリストlistの指定した要素targetの位置を取得する。
+# 逐次探索アルゴリズムによりリストlist_refの指定した要素targetの位置を取得する。
 # リスト内に該当する要素がない場合、undefを返却する。
 sub sequential_search {
-  my ($list, $target) = @_;
+  my ($list_ref, $target) = @_;
 
   # TODO: ロジックを実装
   return undef;
 }
 
-# 二分探索アルゴリズムによりソート済みリストlistの指定した要素targetの位置を取得する。
+# 二分探索アルゴリズムによりソート済みリストlist_refの指定した要素targetの位置を取得する。
 # リスト内に該当する要素がない場合、undefを返却する。
 sub binary_search {
-  my ($list, $target) = @_;
+  my ($list_ref, $target) = @_;
 
   # TODO: ロジックを実装
   return undef;
@@ -49,13 +49,13 @@ sub quick_sort {
 }
 
 sub q_sort {
-  my ($list, $left, $right) = @_;
+  my ($list_ref, $left, $right) = @_;
 
   # TODO: ロジックを実装
 }
 
 sub swap {
-  my ($list, $x, $y) = @_;
+  my ($list_ref, $x, $y) = @_;
 
-  ($list->[$x], $list->[$y]) = ($list->[$y], $list->[$x]);
+  ($list_ref->[$x], $list_ref->[$y]) = ($list_ref->[$y], $list_ref->[$x]);
 }
