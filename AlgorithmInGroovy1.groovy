@@ -9,7 +9,7 @@ class AlgorithmInGroovy1 {
    */
   static boolean isLeapYear(int year) {
     // TODO: ロジックを実装
-    return false;
+    return false
   }
 
   /*
@@ -18,7 +18,7 @@ class AlgorithmInGroovy1 {
    */
   static boolean isPrime(int n) {
     // TODO: ロジックを実装
-    return false;
+    return false
   }
 
   /*
@@ -28,7 +28,7 @@ class AlgorithmInGroovy1 {
    */
   static Integer gcd(int a, int b) {
     // TODO: ロジックを実装
-    return null;
+    return null
   }
 
   /*
@@ -36,7 +36,7 @@ class AlgorithmInGroovy1 {
    */
   static Integer gcd2(int a, int b) {
     // TODO: ロジックを実装
-    return null;
+    return null
   }
 
   /*
@@ -45,7 +45,7 @@ class AlgorithmInGroovy1 {
    */
   static Integer lcm(int a, int b) {
     // TODO: ロジックを実装
-    return null;
+    return null
   }
 
   /*
@@ -55,7 +55,7 @@ class AlgorithmInGroovy1 {
    */
   static Long fibonacci(int i) {
     // TODO: ロジックを実装
-    return null;
+    return null
   }
 
   /*
@@ -63,14 +63,14 @@ class AlgorithmInGroovy1 {
    */
   static Long fibonacci2(int i) {
     // TODO: ロジックを実装
-    return null;
+    return null
   }
 
   /*
    * 末尾再帰版
    */
   static Long fibonacci3(int i) {
-    return null;
+    return null
   }
 
   /*
@@ -78,7 +78,7 @@ class AlgorithmInGroovy1 {
    */
   static Long fibonacci4(int i) {
     // TODO: ロジックを実装
-    return null;
+    return null
   }
 
   /*
@@ -88,7 +88,7 @@ class AlgorithmInGroovy1 {
    */
   static Long factorial(int n) {
     // TODO: ロジックを実装
-    return null;
+    return null
   }
 
   /*
@@ -96,7 +96,7 @@ class AlgorithmInGroovy1 {
    */
   static Long factorial2(int n) {
     // TODO: ロジックを実装
-    return null;
+    return null
   }
 
   /*
@@ -104,7 +104,7 @@ class AlgorithmInGroovy1 {
    */
   static Long factorial3(int n) {
     // TODO: ロジックを実装
-    return null;
+    return null
   }
 
   /*
@@ -112,6 +112,6 @@ class AlgorithmInGroovy1 {
    */
   static Long factorial4(int n) {
     // TODO: ロジックを実装
-    return null;
+    return null
   }
 }
