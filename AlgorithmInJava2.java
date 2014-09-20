@@ -6,6 +6,7 @@
 import static java.util.Collections.swap;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class AlgorithmInJava2 {
@@ -13,9 +14,9 @@ public class AlgorithmInJava2 {
    * 逐次探索アルゴリズムによりリストlistの指定した要素targetの位置を取得する。
    * リスト内に該当する要素がない場合、-1を返却する。
    */
-  public static int sequentialSearch(List<Integer> list, Integer target) {
+  public static <T> int sequentialSearch(List<T> list, T target) {
     for (int i = 0; i < list.size(); i++) {
-      if (list.get(i) == target) {
+      if (list.get(i).equals(target)) {
         return i;
       }
     }
@@ -27,14 +28,15 @@ public class AlgorithmInJava2 {
    * 二分探索アルゴリズムによりソート済みリストlistの指定した要素targetの位置を取得する。
    * リスト内に該当する要素がない場合、-1を返却する。
    */
-  public static int binarySearch(List<Integer> list, Integer target) {
+  public static <T extends Comparable<? super T>> int binarySearch(List<T> list, T target) {
     int low = 0;
     int high = list.size() - 1;
     while (low <= high) {
       int middle = (low + high) / 2;
-      if (list.get(middle) > target) {
+      int c = list.get(middle).compareTo(target);
+      if (c > 0) {
         high = middle - 1;
-      } else if (list.get(middle) < target) {
+      } else if (c < 0) {
         low = middle + 1;
       } else {
         return middle;
@@ -47,11 +49,16 @@ public class AlgorithmInJava2 {
   /*
    * バブルソートアルゴリズムによりリストlistを昇順にソートする。
    */
-  public static List<Integer> bubbleSort(List<Integer> list) {
+  public static <T extends Comparable<? super T>> List<T> bubbleSort(List<T> list) {
+    return bubbleSort(list, (a, b) -> a.compareTo(b));
+  }
+
+  public static <T> List<T> bubbleSort(List<T> list, Comparator<? super T> comp) {
     list = new ArrayList<>(list);
+
     for (int i = 0; i < list.size(); i++) {
       for (int j = 0; j < list.size() - i - 1; j++) {
-        if (list.get(j) > list.get(j + 1)) {
+        if (comp.compare(list.get(j), list.get(j + 1)) > 0) {
           swap(list, j, j + 1);
         }
       }
@@ -63,12 +70,17 @@ public class AlgorithmInJava2 {
   /*
    * セレクションソートアルゴリズムによりリストlistを昇順にソートする。
    */
-  public static List<Integer> selectionSort(List<Integer> list) {
+  public static <T extends Comparable<? super T>> List<T> selectionSort(List<T> list) {
+    return selectionSort(list, (a, b) -> a.compareTo(b));
+  }
+
+  public static <T> List<T> selectionSort(List<T> list, Comparator<? super T> comp) {
     list = new ArrayList<>(list);
+
     for (int first = 0; first < list.size() - 1; first++) {
       int min = first;
       for (int i = first + 1; i < list.size(); i++) {
-        if (list.get(i) < list.get(min)) {
+        if (comp.compare(list.get(i), list.get(min)) < 0) {
           min = i;
         }
       }
@@ -81,12 +93,17 @@ public class AlgorithmInJava2 {
   /*
    * クイックソートアルゴリズムによりリストlistを昇順にソートする。
    */
-  public static List<Integer> quickSort(List<Integer> list) {
-    list = new ArrayList<>(list);
-    return  qSort(list, 0, list.size() - 1);
+  public static <T extends Comparable<? super T>> List<T> quickSort(List<T> list) {
+    return quickSort(list, (a, b) -> a.compareTo(b));
   }
 
-  private static List<Integer> qSort(List<Integer> list, int left, int right) {
+  public static <T> List<T> quickSort(List<T> list, Comparator<? super T> comp) {
+    list = new ArrayList<>(list);
+
+    return  qSort(list, 0, list.size() - 1, comp);
+  }
+
+  private static <T> List<T> qSort(List<T> list, int left, int right, Comparator<? super T> comp) {
     if (right - left < 1) {
       return list;
     }
@@ -95,15 +112,15 @@ public class AlgorithmInJava2 {
     swap(list, left, pivot);
     int last = left;
     for (int i = left + 1; i <= right; i++) {
-      if (list.get(i) < list.get(left)) {
+      if (comp.compare(list.get(i), list.get(left)) < 0) {
         last++;
         swap(list, i, last);
       }
     }
     swap(list, left, last);
 
-    qSort(list, left, last - 1);
-    qSort(list, last + 1, right);
+    qSort(list, left, last - 1, comp);
+    qSort(list, last + 1, right, comp);
 
     return list;
   }

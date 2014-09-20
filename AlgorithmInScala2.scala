@@ -8,7 +8,7 @@ object AlgorithmInScala2 {
    * 逐次探索アルゴリズムによりリストlistの指定した要素targetの位置を取得する。
    * リスト内に該当する要素がない場合、Noneを返却する。
    */
-  def sequentialSearch(list: List[Int], target: Int): Option[Int] = {
+  def sequentialSearch[A](list: List[A], target: A): Option[Int] = {
     // TODO: ロジックを実装
     None
   }
@@ -17,7 +17,7 @@ object AlgorithmInScala2 {
    * 二分探索アルゴリズムによりソート済みリストlistの指定した要素targetの位置を取得する。
    * リスト内に該当する要素がない場合、Noneを返却する。
    */
-  def binarySearch(list: List[Int], target: Int): Option[Int] = {
+  def binarySearch[A <% Ordered[A]](list: List[A], target: A): Option[Int] = {
     // TODO: ロジックを実装
     None
   }
@@ -25,7 +25,7 @@ object AlgorithmInScala2 {
   /*
    * バブルソートアルゴリズムによりリストlistを昇順にソートする。
    */
-  def bubbleSort(list: List[Int]): List[Int] = {
+  def bubbleSort[A <% Ordered[A]](list: List[A]): List[A] = {
     // TODO: ロジックを実装
     list
   }
@@ -33,7 +33,7 @@ object AlgorithmInScala2 {
   /*
    * セレクションソートアルゴリズムによりリストlistを昇順にソートする。
    */
-  def selectionSort(list: List[Int]): List[Int] = {
+  def selectionSort[A <% Ordered[A]](list: List[A]): List[A] = {
     // TODO: ロジックを実装
     list
   }
@@ -41,7 +41,7 @@ object AlgorithmInScala2 {
   /*
    * クイックソートアルゴリズムによりリストlistを昇順にソートする。
    */
-  def quickSort(list: List[Int]): List[Int] = {
+  def quickSort[A <% Ordered[A]](list: List[A]): List[A] = {
     // TODO: ロジックを実装
     list
   }
