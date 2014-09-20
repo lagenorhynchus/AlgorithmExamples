@@ -31,7 +31,7 @@ class AlgorithmInGroovy2 {
 
   static <T> List<T> bubbleSort(List<T> list, Comparator<? super T> comp) {
     // TODO: ロジックを実装
-    return  list;
+    return list;
   }
 
   /*
