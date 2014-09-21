@@ -1,5 +1,3 @@
-# coding: utf-8
-
 #
 # リストの探索とソートのアルゴリズム
 # author: OHASHI Kent

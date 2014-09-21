@@ -1,5 +1,3 @@
-# coding: utf-8
-
 #
 # 数値計算のアルゴリズム
 # author: OHASHI Kent
