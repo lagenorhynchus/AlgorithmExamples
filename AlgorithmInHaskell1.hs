@@ -1,6 +1,5 @@
 {-
 数値計算のアルゴリズム
-author: OHASHI Kent
 -}
 
 module AlgorithmInHaskell1 where

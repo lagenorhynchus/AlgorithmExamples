@@ -1,5 +1,4 @@
 # 数値計算のアルゴリズム
-# author: OHASHI Kent
 
 from functools import reduce
 from math import sqrt

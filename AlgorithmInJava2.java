@@ -1,6 +1,5 @@
 /*
  * リストの探索とソートのアルゴリズム
- * author: OHASHI Kent
  */
 
 import static java.util.Collections.swap;

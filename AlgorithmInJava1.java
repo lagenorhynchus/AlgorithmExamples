@@ -1,6 +1,5 @@
 /*
  * 数値計算のアルゴリズム
- * author: OHASHI Kent
  */
 
 import java.util.HashMap;

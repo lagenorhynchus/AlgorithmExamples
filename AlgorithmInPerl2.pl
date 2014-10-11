@@ -1,6 +1,5 @@
 #
 # リストの探索とソートのアルゴリズム
-# author: OHASHI Kent
 #
 
 use strict;

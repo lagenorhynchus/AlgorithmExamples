@@ -1,5 +1,4 @@
 // 数値計算のアルゴリズム
-// author: OHASHI Kent
 
 var _ = typeof require === "undefined" ? _ : require("underscore");
 

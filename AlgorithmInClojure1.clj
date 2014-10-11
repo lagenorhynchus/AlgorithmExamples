@@ -1,5 +1,4 @@
 ;;;; 数値計算のアルゴリズム
-;;;; author: OHASHI Kent
 
 (ns AlgorithmInClojure1)
 

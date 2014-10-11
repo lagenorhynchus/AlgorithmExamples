@@ -1,5 +1,4 @@
 ;;;; 数値計算のアルゴリズム
-;;;; author: OHASHI Kent
 
 ;;; 西暦年yearが閏年かどうかを判定する。
 (defun is-leap-year (year)

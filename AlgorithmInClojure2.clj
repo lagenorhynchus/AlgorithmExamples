@@ -1,5 +1,4 @@
 ;;;; リストの探索とソートのアルゴリズム
-;;;; author: OHASHI Kent
 
 (ns AlgorithmInClojure2)
 

@@ -1,6 +1,5 @@
 /*
  * リストの探索とソートのアルゴリズムのテスト
- * author: OHASHI Kent
  */
 
 import static org.hamcrest.CoreMatchers.*;

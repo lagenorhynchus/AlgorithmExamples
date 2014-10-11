@@ -1,6 +1,5 @@
 /*
  * 数値計算のアルゴリズムのテスト
- * author: OHASHI Kent
  */
 
 import static org.hamcrest.CoreMatchers.*;

@@ -1,5 +1,4 @@
 // リストの探索とソートのアルゴリズム
-// author: OHASHI Kent
 
 var AlgorithmInJavaScript2 = (function () {
   var swap = function (list, x, y) {
