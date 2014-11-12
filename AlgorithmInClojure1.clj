@@ -74,10 +74,8 @@
 (defn fibonacci-3 [i]
   (if (< i 1)
     nil
-    (letfn [(fib [prev-curr]
-              (let [prev (first prev-curr)
-                    curr (second prev-curr)]
-                [curr (+ prev curr)]))]
+    (letfn [(fib [[prev curr]]
+              [curr (+ prev curr)])]
       (second (nth (iterate fib [1N 0N]) i)))))
 
 ;;; 再帰(メモ化)版
@@ -113,10 +111,8 @@
 (defn factorial-3 [n]
   (if (< n 0)
     nil
-    (letfn [(fact [x-prod]
-              (let [x    (first x-prod)
-                    prod (second x-prod)]
-                [(inc x) (* x prod)]))]
+    (letfn [(fact [[x prod]]
+              [(inc x) (* x prod)])]
       (second (nth (iterate fact [1N 1N]) n)))))
 
 ;;; 畳み込み版
