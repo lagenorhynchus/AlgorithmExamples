@@ -4,6 +4,7 @@
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 
@@ -55,12 +56,12 @@ public class AlgorithmInJava1 {
 
   /*
    * ユークリッドの互除法により整数a, bの最大公約数を算出する。
-   * a, bが1未満の場合、nullを返却する。
+   * a, bが1未満の場合、Optional.emptyを返却する。
    * 除算版
    */
-  public static Integer gcd(int a, int b) {
+  public static Optional<Integer> gcd(int a, int b) {
     if (a < 1 || b < 1) {
-      return null;
+      return Optional.empty();
     }
 
     while (b > 0) {
@@ -68,15 +69,15 @@ public class AlgorithmInJava1 {
       a = b;
       b = r;
     }
-    return a;
+    return Optional.of(a);
   }
 
   /*
    * 減算版
    */
-  public static Integer gcd2(int a, int b) {
+  public static Optional<Integer> gcd2(int a, int b) {
     if (a < 1 || b < 1) {
-      return null;
+      return Optional.empty();
     }
 
     while (true) {
@@ -85,31 +86,31 @@ public class AlgorithmInJava1 {
       } else if (a < b) {
         b -= a;
       } else {
-        return a;
+        return Optional.of(a);
       }
     }
   }
 
   /*
    * 整数a, bの最小公倍数を算出する。
-   * a, bが1未満の場合、nullを返却する。
+   * a, bが1未満の場合、Optional.emptyを返却する。
    */
-  public static Integer lcm(int a, int b) {
+  public static Optional<Integer> lcm(int a, int b) {
     if (a < 1 || b < 1) {
-      return null;
+      return Optional.empty();
     }
 
-    return a * b / gcd(a, b);
+    return gcd(a, b).map(gcd -> a * b / gcd);
   }
 
   /*
    * フィボナッチ数列の第i項の値を算出する。
-   * iが1未満の場合、nullを返却する。
+   * iが1未満の場合、Optional.emptyを返却する。
    * ループ版
    */
-  public static Long fibonacci(int i) {
+  public static Optional<Long> fibonacci(int i) {
     if (i < 1) {
-      return null;
+      return Optional.empty();
     }
 
     long previous = 1L;
@@ -119,31 +120,31 @@ public class AlgorithmInJava1 {
       previous = current;
       current = tmp + current;
     }
-    return current;
+    return Optional.of(current);
   }
 
   /*
    * 再帰版
    */
-  public static Long fibonacci2(int i) {
+  public static Optional<Long> fibonacci2(int i) {
     if (i < 1) {
-      return null;
+      return Optional.empty();
     } else if (i == 1 || i == 2) {
-      return 1L;
+      return Optional.of(1L);
     }
 
-    return fibonacci2(i - 2) + fibonacci2(i - 1);
+    return fibonacci2(i - 2).flatMap(fib1 -> fibonacci2(i - 1).map(fib2 -> fib1 + fib2));
   }
 
   /*
    * 末尾再帰版
    */
-  public static Long fibonacci3(int i) {
+  public static Optional<Long> fibonacci3(int i) {
     if (i < 1) {
-      return null;
+      return Optional.empty();
     }
 
-    return fib(i, 1L, 0L);
+    return Optional.of(fib(i, 1L, 0L));
   }
 
   private static long fib(int x, long previous, long current) {
@@ -157,12 +158,12 @@ public class AlgorithmInJava1 {
   /*
    * 再帰(メモ化)版
    */
-  public static Long fibonacci4(int i) {
+  public static Optional<Long> fibonacci4(int i) {
     if (i < 1) {
-      return null;
+      return Optional.empty();
     }
 
-    return fib2(i, new HashMap<>());
+    return Optional.of(fib2(i, new HashMap<>()));
   }
 
   private static long fib2(int x, Map<Integer, Long> fibMap) {
@@ -177,43 +178,43 @@ public class AlgorithmInJava1 {
 
   /*
    * 整数nの階乗n!の値を算出する。
-   * nが負の数の場合、nullを返却する。
+   * nが負の数の場合、Optional.emptyを返却する。
    * ループ版
    */
-  public static Long factorial(int n) {
+  public static Optional<Long> factorial(int n) {
     if (n < 0) {
-      return null;
+      return Optional.empty();
     }
 
     long product = 1L;
     for (int i = 2; i <= n; i++) {
       product *= i;
     }
-    return product;
+    return Optional.of(product);
   }
 
   /*
    * 再帰版
    */
-  public static Long factorial2(int n) {
+  public static Optional<Long> factorial2(int n) {
     if (n < 0) {
-      return null;
+      return Optional.empty();
     } else if (n == 0 || n == 1) {
-      return 1L;
+      return Optional.of(1L);
     }
 
-    return n * factorial2(n - 1);
+    return factorial2(n - 1).map(fact -> n * fact);
   }
 
   /*
    * 末尾再帰版
    */
-  public static Long factorial3(int n) {
+  public static Optional<Long> factorial3(int n) {
     if (n < 0) {
-      return null;
+      return Optional.empty();
     }
 
-    return fact(n, 1L);
+    return Optional.of(fact(n, 1L));
   }
 
   private static long fact(int x, long product) {
@@ -227,12 +228,12 @@ public class AlgorithmInJava1 {
   /*
    * 畳み込み版
    */
-  public static Long factorial4(int n) {
+  public static Optional<Long> factorial4(int n) {
     if (n < 0) {
-      return null;
+      return Optional.empty();
     }
 
-    return LongStream.rangeClosed(2, n)
-      .reduce(1L, (product, i) -> product * i);
+    return Optional.of(LongStream.rangeClosed(2, n)
+      .reduce(1L, (product, i) -> product * i));
   }
 }

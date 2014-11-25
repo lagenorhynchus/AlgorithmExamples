@@ -7,6 +7,7 @@ import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Optional;
 import java.util.List;
 
 import org.junit.Test;
@@ -17,8 +18,8 @@ public class AlgorithmInJava2Test {
     List<Integer> list = Arrays.asList(8, 2, 7, 5, 9, 4, 1, 10, 6, 3);
     int target = 8;
 
-    int expected = 0;
-    int actual = AlgorithmInJava2.sequentialSearch(list, target);
+    Optional<Integer> expected = Optional.of(0);
+    Optional<Integer> actual = AlgorithmInJava2.sequentialSearch(list, target);
     assertThat(actual, is(expected));
   }
 
@@ -27,38 +28,38 @@ public class AlgorithmInJava2Test {
     List<Integer> list = Arrays.asList(8, 2, 7, 5, 9, 4, 1, 10, 6, 3);
     int target = 3;
 
-    int expected = 9;
-    int actual = AlgorithmInJava2.sequentialSearch(list, target);
+    Optional<Integer> expected = Optional.of(9);
+    Optional<Integer> actual = AlgorithmInJava2.sequentialSearch(list, target);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void sequentialSearchでtargetが存在する最小の要素より小さいときマイナス1が返却される() {
+  public void sequentialSearchでtargetが存在する最小の要素より小さいときemptyが返却される() {
     List<Integer> list = Arrays.asList(8, 2, 7, 5, 9, 4, 1, 10, 6, 3);
     int target = 0;
 
-    int expected = -1;
-    int actual = AlgorithmInJava2.sequentialSearch(list, target);
+    Optional<Integer> expected = Optional.empty();
+    Optional<Integer> actual = AlgorithmInJava2.sequentialSearch(list, target);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void sequentialSearchでtargetが存在する最大の要素より大きいときマイナス1が返却される() {
+  public void sequentialSearchでtargetが存在する最大の要素より大きいときemptyが返却される() {
     List<Integer> list = Arrays.asList(8, 2, 7, 5, 9, 4, 1, 10, 6, 3);
     int target = 11;
 
-    int expected = -1;
-    int actual = AlgorithmInJava2.sequentialSearch(list, target);
+    Optional<Integer> expected = Optional.empty();
+    Optional<Integer> actual = AlgorithmInJava2.sequentialSearch(list, target);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void sequentialSearchでlistが空のときマイナス1が返却される() {
+  public void sequentialSearchでlistが空のときemptyが返却される() {
     List<Integer> list = new ArrayList<>();
     int target = 1;
 
-    int expected = -1;
-    int actual = AlgorithmInJava2.sequentialSearch(list, target);
+    Optional<Integer> expected = Optional.empty();
+    Optional<Integer> actual = AlgorithmInJava2.sequentialSearch(list, target);
     assertThat(actual, is(expected));
   }
 
@@ -67,8 +68,8 @@ public class AlgorithmInJava2Test {
     List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
     int target = 1;
 
-    int expected = 0;
-    int actual = AlgorithmInJava2.binarySearch(list, target);
+    Optional<Integer> expected = Optional.of(0);
+    Optional<Integer> actual = AlgorithmInJava2.binarySearch(list, target);
     assertThat(actual, is(expected));
   }
 
@@ -77,38 +78,38 @@ public class AlgorithmInJava2Test {
     List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
     int target = 10;
 
-    int expected = 9;
-    int actual = AlgorithmInJava2.binarySearch(list, target);
+    Optional<Integer> expected = Optional.of(9);
+    Optional<Integer> actual = AlgorithmInJava2.binarySearch(list, target);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void binarySearchでtargetが存在する最小の要素より小さいときマイナス1が返却される() {
+  public void binarySearchでtargetが存在する最小の要素より小さいときemptyが返却される() {
     List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
     int target = 0;
 
-    int expected = -1;
-    int actual = AlgorithmInJava2.binarySearch(list, target);
+    Optional<Integer> expected = Optional.empty();
+    Optional<Integer> actual = AlgorithmInJava2.binarySearch(list, target);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void binarySearchでtargetが存在する最大の要素より大きいときマイナス1が返却される() {
+  public void binarySearchでtargetが存在する最大の要素より大きいときemptyが返却される() {
     List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
     int target = 11;
 
-    int expected = -1;
-    int actual = AlgorithmInJava2.binarySearch(list, target);
+    Optional<Integer> expected = Optional.empty();
+    Optional<Integer> actual = AlgorithmInJava2.binarySearch(list, target);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void binarySearchでlistが空のときマイナス1が返却される() {
+  public void binarySearchでlistが空のときemptyが返却される() {
     List<Integer> list = new ArrayList<>();
     int target = 1;
 
-    int expected = -1;
-    int actual = AlgorithmInJava2.binarySearch(list, target);
+    Optional<Integer> expected = Optional.empty();
+    Optional<Integer> actual = AlgorithmInJava2.binarySearch(list, target);
     assertThat(actual, is(expected));
   }
 

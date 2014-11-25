@@ -5,20 +5,20 @@
 class AlgorithmInGroovy2 {
   /*
    * 逐次探索アルゴリズムによりリストlistの指定した要素targetの位置を取得する。
-   * リスト内に該当する要素がない場合、-1を返却する。
+   * リスト内に該当する要素がない場合、Optional.emptyを返却する。
    */
-  static <T> int sequentialSearch(List<T> list, T target) {
+  static <T> Optional<Integer> sequentialSearch(List<T> list, T target) {
     // TODO: ロジックを実装
-    return -1
+    return Optional.empty()
   }
 
   /*
    * 二分探索アルゴリズムによりソート済みリストlistの指定した要素targetの位置を取得する。
-   * リスト内に該当する要素がない場合、-1を返却する。
+   * リスト内に該当する要素がない場合、Optional.emptyを返却する。
    */
-  static <T extends Comparable<? super T>> int binarySearch(List<T> list, T target) {
+  static <T extends Comparable<? super T>> Optional<Integer> binarySearch(List<T> list, T target) {
     // TODO: ロジックを実装
-    return -1
+    return Optional.empty()
   }
 
   /*

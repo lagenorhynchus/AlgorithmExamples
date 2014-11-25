@@ -7,6 +7,7 @@ import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Optional;
 import java.util.List;
 
 import org.junit.Test;
@@ -161,8 +162,8 @@ public class AlgorithmInJava1Test {
     int a = 8;
     int b = 12;
 
-    Integer expected = 4;
-    Integer actual = AlgorithmInJava1.gcd(a, b);
+    Optional<Integer> expected = Optional.of(4);
+    Optional<Integer> actual = AlgorithmInJava1.gcd(a, b);
     assertThat(actual, is(expected));
   }
 
@@ -171,8 +172,8 @@ public class AlgorithmInJava1Test {
     int a = 2;
     int b = 3;
 
-    Integer expected = 1;
-    Integer actual = AlgorithmInJava1.gcd(a, b);
+    Optional<Integer> expected = Optional.of(1);
+    Optional<Integer> actual = AlgorithmInJava1.gcd(a, b);
     assertThat(actual, is(expected));
   }
 
@@ -181,68 +182,68 @@ public class AlgorithmInJava1Test {
     int a = 6;
     int b = 6;
 
-    Integer expected = 6;
-    Integer actual = AlgorithmInJava1.gcd(a, b);
+    Optional<Integer> expected = Optional.of(6);
+    Optional<Integer> actual = AlgorithmInJava1.gcd(a, b);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void gcdでaが0のときnullが返却される() {
+  public void gcdでaが0のときemptyが返却される() {
     int a = 0;
     int b = 2;
 
-    Integer expected = null;
-    Integer actual = AlgorithmInJava1.gcd(a, b);
+    Optional<Integer> expected = Optional.empty();
+    Optional<Integer> actual = AlgorithmInJava1.gcd(a, b);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void gcdでbが0のときnullが返却される() {
+  public void gcdでbが0のときemptyが返却される() {
     int a = 2;
     int b = 0;
 
-    Integer expected = null;
-    Integer actual = AlgorithmInJava1.gcd(a, b);
+    Optional<Integer> expected = Optional.empty();
+    Optional<Integer> actual = AlgorithmInJava1.gcd(a, b);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void gcdでaとbが0のときnullが返却される() {
+  public void gcdでaとbが0のときemptyが返却される() {
     int a = 0;
     int b = 0;
 
-    Integer expected = null;
-    Integer actual = AlgorithmInJava1.gcd(a, b);
+    Optional<Integer> expected = Optional.empty();
+    Optional<Integer> actual = AlgorithmInJava1.gcd(a, b);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void gcdでaがマイナス1のときnullが返却される() {
+  public void gcdでaがマイナス1のときemptyが返却される() {
     int a = -1;
     int b = 2;
 
-    Integer expected = null;
-    Integer actual = AlgorithmInJava1.gcd(a, b);
+    Optional<Integer> expected = Optional.empty();
+    Optional<Integer> actual = AlgorithmInJava1.gcd(a, b);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void gcdでbがマイナス1のときnullが返却される() {
+  public void gcdでbがマイナス1のときemptyが返却される() {
     int a = 2;
     int b = -1;
 
-    Integer expected = null;
-    Integer actual = AlgorithmInJava1.gcd(a, b);
+    Optional<Integer> expected = Optional.empty();
+    Optional<Integer> actual = AlgorithmInJava1.gcd(a, b);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void gcdでaとbがマイナス1のときnullが返却される() {
+  public void gcdでaとbがマイナス1のときemptyが返却される() {
     int a = -1;
     int b = -1;
 
-    Integer expected = null;
-    Integer actual = AlgorithmInJava1.gcd(a, b);
+    Optional<Integer> expected = Optional.empty();
+    Optional<Integer> actual = AlgorithmInJava1.gcd(a, b);
     assertThat(actual, is(expected));
   }
 
@@ -251,8 +252,8 @@ public class AlgorithmInJava1Test {
     int a = 8;
     int b = 12;
 
-    Integer expected = 4;
-    Integer actual = AlgorithmInJava1.gcd2(a, b);
+    Optional<Integer> expected = Optional.of(4);
+    Optional<Integer> actual = AlgorithmInJava1.gcd2(a, b);
     assertThat(actual, is(expected));
   }
 
@@ -261,8 +262,8 @@ public class AlgorithmInJava1Test {
     int a = 2;
     int b = 3;
 
-    Integer expected = 1;
-    Integer actual = AlgorithmInJava1.gcd2(a, b);
+    Optional<Integer> expected = Optional.of(1);
+    Optional<Integer> actual = AlgorithmInJava1.gcd2(a, b);
     assertThat(actual, is(expected));
   }
 
@@ -271,68 +272,68 @@ public class AlgorithmInJava1Test {
     int a = 6;
     int b = 6;
 
-    Integer expected = 6;
-    Integer actual = AlgorithmInJava1.gcd2(a, b);
+    Optional<Integer> expected = Optional.of(6);
+    Optional<Integer> actual = AlgorithmInJava1.gcd2(a, b);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void gcd2でaが0のときnullが返却される() {
+  public void gcd2でaが0のときemptyが返却される() {
     int a = 0;
     int b = 2;
 
-    Integer expected = null;
-    Integer actual = AlgorithmInJava1.gcd2(a, b);
+    Optional<Integer> expected = Optional.empty();
+    Optional<Integer> actual = AlgorithmInJava1.gcd2(a, b);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void gcd2でbが0のときnullが返却される() {
+  public void gcd2でbが0のときemptyが返却される() {
     int a = 2;
     int b = 0;
 
-    Integer expected = null;
-    Integer actual = AlgorithmInJava1.gcd2(a, b);
+    Optional<Integer> expected = Optional.empty();
+    Optional<Integer> actual = AlgorithmInJava1.gcd2(a, b);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void gcd2でaとbが0のときnullが返却される() {
+  public void gcd2でaとbが0のときemptyが返却される() {
     int a = 0;
     int b = 0;
 
-    Integer expected = null;
-    Integer actual = AlgorithmInJava1.gcd2(a, b);
+    Optional<Integer> expected = Optional.empty();
+    Optional<Integer> actual = AlgorithmInJava1.gcd2(a, b);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void gcd2でaがマイナス1のときnullが返却される() {
+  public void gcd2でaがマイナス1のときemptyが返却される() {
     int a = -1;
     int b = 2;
 
-    Integer expected = null;
-    Integer actual = AlgorithmInJava1.gcd2(a, b);
+    Optional<Integer> expected = Optional.empty();
+    Optional<Integer> actual = AlgorithmInJava1.gcd2(a, b);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void gcd2でbがマイナス1のときnullが返却される() {
+  public void gcd2でbがマイナス1のときemptyが返却される() {
     int a = 2;
     int b = -1;
 
-    Integer expected = null;
-    Integer actual = AlgorithmInJava1.gcd2(a, b);
+    Optional<Integer> expected = Optional.empty();
+    Optional<Integer> actual = AlgorithmInJava1.gcd2(a, b);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void gcd2でaとbがマイナス1のときnullが返却される() {
+  public void gcd2でaとbがマイナス1のときemptyが返却される() {
     int a = -1;
     int b = -1;
 
-    Integer expected = null;
-    Integer actual = AlgorithmInJava1.gcd2(a, b);
+    Optional<Integer> expected = Optional.empty();
+    Optional<Integer> actual = AlgorithmInJava1.gcd2(a, b);
     assertThat(actual, is(expected));
   }
 
@@ -341,8 +342,8 @@ public class AlgorithmInJava1Test {
     int a = 8;
     int b = 12;
 
-    Integer expected = 24;
-    Integer actual = AlgorithmInJava1.lcm(a, b);
+    Optional<Integer> expected = Optional.of(24);
+    Optional<Integer> actual = AlgorithmInJava1.lcm(a, b);
     assertThat(actual, is(expected));
   }
 
@@ -351,8 +352,8 @@ public class AlgorithmInJava1Test {
     int a = 2;
     int b = 3;
 
-    Integer expected = 6;
-    Integer actual = AlgorithmInJava1.lcm(a, b);
+    Optional<Integer> expected = Optional.of(6);
+    Optional<Integer> actual = AlgorithmInJava1.lcm(a, b);
     assertThat(actual, is(expected));
   }
 
@@ -361,68 +362,68 @@ public class AlgorithmInJava1Test {
     int a = 6;
     int b = 6;
 
-    Integer expected = 6;
-    Integer actual = AlgorithmInJava1.lcm(a, b);
+    Optional<Integer> expected = Optional.of(6);
+    Optional<Integer> actual = AlgorithmInJava1.lcm(a, b);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void lcmでaが0のときnullが返却される() {
+  public void lcmでaが0のときemptyが返却される() {
     int a = 0;
     int b = 2;
 
-    Integer expected = null;
-    Integer actual = AlgorithmInJava1.lcm(a, b);
+    Optional<Integer> expected = Optional.empty();
+    Optional<Integer> actual = AlgorithmInJava1.lcm(a, b);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void lcmでbが0のときnullが返却される() {
+  public void lcmでbが0のときemptyが返却される() {
     int a = 2;
     int b = 0;
 
-    Integer expected = null;
-    Integer actual = AlgorithmInJava1.lcm(a, b);
+    Optional<Integer> expected = Optional.empty();
+    Optional<Integer> actual = AlgorithmInJava1.lcm(a, b);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void lcmでaとbが0のときnullが返却される() {
+  public void lcmでaとbが0のときemptyが返却される() {
     int a = 0;
     int b = 0;
 
-    Integer expected = null;
-    Integer actual = AlgorithmInJava1.lcm(a, b);
+    Optional<Integer> expected = Optional.empty();
+    Optional<Integer> actual = AlgorithmInJava1.lcm(a, b);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void lcmでaがマイナス1のときnullが返却される() {
+  public void lcmでaがマイナス1のときemptyが返却される() {
     int a = -1;
     int b = 2;
 
-    Integer expected = null;
-    Integer actual = AlgorithmInJava1.lcm(a, b);
+    Optional<Integer> expected = Optional.empty();
+    Optional<Integer> actual = AlgorithmInJava1.lcm(a, b);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void lcmでbがマイナス1のときnullが返却される() {
+  public void lcmでbがマイナス1のときemptyが返却される() {
     int a = 2;
     int b = -1;
 
-    Integer expected = null;
-    Integer actual = AlgorithmInJava1.lcm(a, b);
+    Optional<Integer> expected = Optional.empty();
+    Optional<Integer> actual = AlgorithmInJava1.lcm(a, b);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void lcmでaとbがマイナス1のときnullが返却される() {
+  public void lcmでaとbがマイナス1のときemptyが返却される() {
     int a = -1;
     int b = -1;
 
-    Integer expected = null;
-    Integer actual = AlgorithmInJava1.lcm(a, b);
+    Optional<Integer> expected = Optional.empty();
+    Optional<Integer> actual = AlgorithmInJava1.lcm(a, b);
     assertThat(actual, is(expected));
   }
 
@@ -430,8 +431,8 @@ public class AlgorithmInJava1Test {
   public void fibonacciで第1項の値が返却される() {
     int i = 1;
 
-    Long expected = 1L;
-    Long actual = AlgorithmInJava1.fibonacci(i);
+    Optional<Long> expected = Optional.of(1L);
+    Optional<Long> actual = AlgorithmInJava1.fibonacci(i);
     assertThat(actual, is(expected));
   }
 
@@ -439,8 +440,8 @@ public class AlgorithmInJava1Test {
   public void fibonacciで第2項の値が返却される() {
     int i = 2;
 
-    Long expected = 1L;
-    Long actual = AlgorithmInJava1.fibonacci(i);
+    Optional<Long> expected = Optional.of(1L);
+    Optional<Long> actual = AlgorithmInJava1.fibonacci(i);
     assertThat(actual, is(expected));
   }
 
@@ -448,8 +449,8 @@ public class AlgorithmInJava1Test {
   public void fibonacciで第3項の値が返却される() {
     int i = 3;
 
-    Long expected = 2L;
-    Long actual = AlgorithmInJava1.fibonacci(i);
+    Optional<Long> expected = Optional.of(2L);
+    Optional<Long> actual = AlgorithmInJava1.fibonacci(i);
     assertThat(actual, is(expected));
   }
 
@@ -457,26 +458,26 @@ public class AlgorithmInJava1Test {
   public void fibonacciで第6項の値が返却される() {
     int i = 6;
 
-    Long expected = 8L;
-    Long actual = AlgorithmInJava1.fibonacci(i);
+    Optional<Long> expected = Optional.of(8L);
+    Optional<Long> actual = AlgorithmInJava1.fibonacci(i);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void fibonacciでiが0のときnullが返却される() {
+  public void fibonacciでiが0のときemptyが返却される() {
     int i = 0;
 
-    Long expected = null;
-    Long actual = AlgorithmInJava1.fibonacci(i);
+    Optional<Long> expected = Optional.empty();
+    Optional<Long> actual = AlgorithmInJava1.fibonacci(i);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void fibonacciでiがマイナス1のときnullが返却される() {
+  public void fibonacciでiがマイナス1のときemptyが返却される() {
     int i = -1;
 
-    Long expected = null;
-    Long actual = AlgorithmInJava1.fibonacci(i);
+    Optional<Long> expected = Optional.empty();
+    Optional<Long> actual = AlgorithmInJava1.fibonacci(i);
     assertThat(actual, is(expected));
   }
 
@@ -484,8 +485,8 @@ public class AlgorithmInJava1Test {
   public void fibonacci2で第1項の値が返却される() {
     int i = 1;
 
-    Long expected = 1L;
-    Long actual = AlgorithmInJava1.fibonacci2(i);
+    Optional<Long> expected = Optional.of(1L);
+    Optional<Long> actual = AlgorithmInJava1.fibonacci2(i);
     assertThat(actual, is(expected));
   }
 
@@ -493,8 +494,8 @@ public class AlgorithmInJava1Test {
   public void fibonacci2で第2項の値が返却される() {
     int i = 2;
 
-    Long expected = 1L;
-    Long actual = AlgorithmInJava1.fibonacci2(i);
+    Optional<Long> expected = Optional.of(1L);
+    Optional<Long> actual = AlgorithmInJava1.fibonacci2(i);
     assertThat(actual, is(expected));
   }
 
@@ -502,8 +503,8 @@ public class AlgorithmInJava1Test {
   public void fibonacci2で第3項の値が返却される() {
     int i = 3;
 
-    Long expected = 2L;
-    Long actual = AlgorithmInJava1.fibonacci2(i);
+    Optional<Long> expected = Optional.of(2L);
+    Optional<Long> actual = AlgorithmInJava1.fibonacci2(i);
     assertThat(actual, is(expected));
   }
 
@@ -511,26 +512,26 @@ public class AlgorithmInJava1Test {
   public void fibonacci2で第6項の値が返却される() {
     int i = 6;
 
-    Long expected = 8L;
-    Long actual = AlgorithmInJava1.fibonacci2(i);
+    Optional<Long> expected = Optional.of(8L);
+    Optional<Long> actual = AlgorithmInJava1.fibonacci2(i);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void fibonacci2でiが0のときnullが返却される() {
+  public void fibonacci2でiが0のときemptyが返却される() {
     int i = 0;
 
-    Long expected = null;
-    Long actual = AlgorithmInJava1.fibonacci2(i);
+    Optional<Long> expected = Optional.empty();
+    Optional<Long> actual = AlgorithmInJava1.fibonacci2(i);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void fibonacci2でiがマイナス1のときnullが返却される() {
+  public void fibonacci2でiがマイナス1のときemptyが返却される() {
     int i = -1;
 
-    Long expected = null;
-    Long actual = AlgorithmInJava1.fibonacci2(i);
+    Optional<Long> expected = Optional.empty();
+    Optional<Long> actual = AlgorithmInJava1.fibonacci2(i);
     assertThat(actual, is(expected));
   }
 
@@ -538,8 +539,8 @@ public class AlgorithmInJava1Test {
   public void fibonacci3で第1項の値が返却される() {
     int i = 1;
 
-    Long expected = 1L;
-    Long actual = AlgorithmInJava1.fibonacci3(i);
+    Optional<Long> expected = Optional.of(1L);
+    Optional<Long> actual = AlgorithmInJava1.fibonacci3(i);
     assertThat(actual, is(expected));
   }
 
@@ -547,8 +548,8 @@ public class AlgorithmInJava1Test {
   public void fibonacci3で第2項の値が返却される() {
     int i = 2;
 
-    Long expected = 1L;
-    Long actual = AlgorithmInJava1.fibonacci3(i);
+    Optional<Long> expected = Optional.of(1L);
+    Optional<Long> actual = AlgorithmInJava1.fibonacci3(i);
     assertThat(actual, is(expected));
   }
 
@@ -556,8 +557,8 @@ public class AlgorithmInJava1Test {
   public void fibonacci3で第3項の値が返却される() {
     int i = 3;
 
-    Long expected = 2L;
-    Long actual = AlgorithmInJava1.fibonacci3(i);
+    Optional<Long> expected = Optional.of(2L);
+    Optional<Long> actual = AlgorithmInJava1.fibonacci3(i);
     assertThat(actual, is(expected));
   }
 
@@ -565,26 +566,26 @@ public class AlgorithmInJava1Test {
   public void fibonacci3で第6項の値が返却される() {
     int i = 6;
 
-    Long expected = 8L;
-    Long actual = AlgorithmInJava1.fibonacci3(i);
+    Optional<Long> expected = Optional.of(8L);
+    Optional<Long> actual = AlgorithmInJava1.fibonacci3(i);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void fibonacci3でiが0のときnullが返却される() {
+  public void fibonacci3でiが0のときemptyが返却される() {
     int i = 0;
 
-    Long expected = null;
-    Long actual = AlgorithmInJava1.fibonacci3(i);
+    Optional<Long> expected = Optional.empty();
+    Optional<Long> actual = AlgorithmInJava1.fibonacci3(i);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void fibonacci3でiがマイナス1のときnullが返却される() {
+  public void fibonacci3でiがマイナス1のときemptyが返却される() {
     int i = -1;
 
-    Long expected = null;
-    Long actual = AlgorithmInJava1.fibonacci3(i);
+    Optional<Long> expected = Optional.empty();
+    Optional<Long> actual = AlgorithmInJava1.fibonacci3(i);
     assertThat(actual, is(expected));
   }
 
@@ -592,8 +593,8 @@ public class AlgorithmInJava1Test {
   public void fibonacci4で第1項の値が返却される() {
     int i = 1;
 
-    Long expected = 1L;
-    Long actual = AlgorithmInJava1.fibonacci4(i);
+    Optional<Long> expected = Optional.of(1L);
+    Optional<Long> actual = AlgorithmInJava1.fibonacci4(i);
     assertThat(actual, is(expected));
   }
 
@@ -601,8 +602,8 @@ public class AlgorithmInJava1Test {
   public void fibonacci4で第2項の値が返却される() {
     int i = 2;
 
-    Long expected = 1L;
-    Long actual = AlgorithmInJava1.fibonacci4(i);
+    Optional<Long> expected = Optional.of(1L);
+    Optional<Long> actual = AlgorithmInJava1.fibonacci4(i);
     assertThat(actual, is(expected));
   }
 
@@ -610,8 +611,8 @@ public class AlgorithmInJava1Test {
   public void fibonacci4で第3項の値が返却される() {
     int i = 3;
 
-    Long expected = 2L;
-    Long actual = AlgorithmInJava1.fibonacci4(i);
+    Optional<Long> expected = Optional.of(2L);
+    Optional<Long> actual = AlgorithmInJava1.fibonacci4(i);
     assertThat(actual, is(expected));
   }
 
@@ -619,26 +620,26 @@ public class AlgorithmInJava1Test {
   public void fibonacci4で第6項の値が返却される() {
     int i = 6;
 
-    Long expected = 8L;
-    Long actual = AlgorithmInJava1.fibonacci4(i);
+    Optional<Long> expected = Optional.of(8L);
+    Optional<Long> actual = AlgorithmInJava1.fibonacci4(i);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void fibonacci4でiが0のときnullが返却される() {
+  public void fibonacci4でiが0のときemptyが返却される() {
     int i = 0;
 
-    Long expected = null;
-    Long actual = AlgorithmInJava1.fibonacci4(i);
+    Optional<Long> expected = Optional.empty();
+    Optional<Long> actual = AlgorithmInJava1.fibonacci4(i);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void fibonacci4でiがマイナス1のときnullが返却される() {
+  public void fibonacci4でiがマイナス1のときemptyが返却される() {
     int i = -1;
 
-    Long expected = null;
-    Long actual = AlgorithmInJava1.fibonacci4(i);
+    Optional<Long> expected = Optional.empty();
+    Optional<Long> actual = AlgorithmInJava1.fibonacci4(i);
     assertThat(actual, is(expected));
   }
 
@@ -646,8 +647,8 @@ public class AlgorithmInJava1Test {
   public void factorialで0の階乗の値が返却される() {
     int n = 0;
 
-    Long expected = 1L;
-    Long actual = AlgorithmInJava1.factorial(n);
+    Optional<Long> expected = Optional.of(1L);
+    Optional<Long> actual = AlgorithmInJava1.factorial(n);
     assertThat(actual, is(expected));
   }
 
@@ -655,8 +656,8 @@ public class AlgorithmInJava1Test {
   public void factorialで1の階乗の値が返却される() {
     int n = 1;
 
-    Long expected = 1L;
-    Long actual = AlgorithmInJava1.factorial(n);
+    Optional<Long> expected = Optional.of(1L);
+    Optional<Long> actual = AlgorithmInJava1.factorial(n);
     assertThat(actual, is(expected));
   }
 
@@ -664,8 +665,8 @@ public class AlgorithmInJava1Test {
   public void factorialで2の階乗の値が返却される() {
     int n = 2;
 
-    Long expected = 2L;
-    Long actual = AlgorithmInJava1.factorial(n);
+    Optional<Long> expected = Optional.of(2L);
+    Optional<Long> actual = AlgorithmInJava1.factorial(n);
     assertThat(actual, is(expected));
   }
 
@@ -673,17 +674,17 @@ public class AlgorithmInJava1Test {
   public void factorialで5の階乗の値が返却される() {
     int n = 5;
 
-    Long expected = 120L;
-    Long actual = AlgorithmInJava1.factorial(n);
+    Optional<Long> expected = Optional.of(120L);
+    Optional<Long> actual = AlgorithmInJava1.factorial(n);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void factorialでnがマイナス1のときnullが返却される() {
+  public void factorialでnがマイナス1のときemptyが返却される() {
     int n = -1;
 
-    Long expected = null;
-    Long actual = AlgorithmInJava1.factorial(n);
+    Optional<Long> expected = Optional.empty();
+    Optional<Long> actual = AlgorithmInJava1.factorial(n);
     assertThat(actual, is(expected));
   }
 
@@ -691,8 +692,8 @@ public class AlgorithmInJava1Test {
   public void factorial2で0の階乗の値が返却される() {
     int n = 0;
 
-    Long expected = 1L;
-    Long actual = AlgorithmInJava1.factorial2(n);
+    Optional<Long> expected = Optional.of(1L);
+    Optional<Long> actual = AlgorithmInJava1.factorial2(n);
     assertThat(actual, is(expected));
   }
 
@@ -700,8 +701,8 @@ public class AlgorithmInJava1Test {
   public void factorial2で1の階乗の値が返却される() {
     int n = 1;
 
-    Long expected = 1L;
-    Long actual = AlgorithmInJava1.factorial2(n);
+    Optional<Long> expected = Optional.of(1L);
+    Optional<Long> actual = AlgorithmInJava1.factorial2(n);
     assertThat(actual, is(expected));
   }
 
@@ -709,8 +710,8 @@ public class AlgorithmInJava1Test {
   public void factorial2で2の階乗の値が返却される() {
     int n = 2;
 
-    Long expected = 2L;
-    Long actual = AlgorithmInJava1.factorial2(n);
+    Optional<Long> expected = Optional.of(2L);
+    Optional<Long> actual = AlgorithmInJava1.factorial2(n);
     assertThat(actual, is(expected));
   }
 
@@ -718,17 +719,17 @@ public class AlgorithmInJava1Test {
   public void factorial2で5の階乗の値が返却される() {
     int n = 5;
 
-    Long expected = 120L;
-    Long actual = AlgorithmInJava1.factorial2(n);
+    Optional<Long> expected = Optional.of(120L);
+    Optional<Long> actual = AlgorithmInJava1.factorial2(n);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void factorial2でnがマイナス1のときnullが返却される() {
+  public void factorial2でnがマイナス1のときemptyが返却される() {
     int n = -1;
 
-    Long expected = null;
-    Long actual = AlgorithmInJava1.factorial2(n);
+    Optional<Long> expected = Optional.empty();
+    Optional<Long> actual = AlgorithmInJava1.factorial2(n);
     assertThat(actual, is(expected));
   }
 
@@ -736,8 +737,8 @@ public class AlgorithmInJava1Test {
   public void factorial3で0の階乗の値が返却される() {
     int n = 0;
 
-    Long expected = 1L;
-    Long actual = AlgorithmInJava1.factorial3(n);
+    Optional<Long> expected = Optional.of(1L);
+    Optional<Long> actual = AlgorithmInJava1.factorial3(n);
     assertThat(actual, is(expected));
   }
 
@@ -745,8 +746,8 @@ public class AlgorithmInJava1Test {
   public void factorial3で1の階乗の値が返却される() {
     int n = 1;
 
-    Long expected = 1L;
-    Long actual = AlgorithmInJava1.factorial3(n);
+    Optional<Long> expected = Optional.of(1L);
+    Optional<Long> actual = AlgorithmInJava1.factorial3(n);
     assertThat(actual, is(expected));
   }
 
@@ -754,8 +755,8 @@ public class AlgorithmInJava1Test {
   public void factorial3で2の階乗の値が返却される() {
     int n = 2;
 
-    Long expected = 2L;
-    Long actual = AlgorithmInJava1.factorial3(n);
+    Optional<Long> expected = Optional.of(2L);
+    Optional<Long> actual = AlgorithmInJava1.factorial3(n);
     assertThat(actual, is(expected));
   }
 
@@ -763,17 +764,17 @@ public class AlgorithmInJava1Test {
   public void factorial3で5の階乗の値が返却される() {
     int n = 5;
 
-    Long expected = 120L;
-    Long actual = AlgorithmInJava1.factorial3(n);
+    Optional<Long> expected = Optional.of(120L);
+    Optional<Long> actual = AlgorithmInJava1.factorial3(n);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void factorial3でnがマイナス1のときnullが返却される() {
+  public void factorial3でnがマイナス1のときemptyが返却される() {
     int n = -1;
 
-    Long expected = null;
-    Long actual = AlgorithmInJava1.factorial3(n);
+    Optional<Long> expected = Optional.empty();
+    Optional<Long> actual = AlgorithmInJava1.factorial3(n);
     assertThat(actual, is(expected));
   }
 
@@ -781,8 +782,8 @@ public class AlgorithmInJava1Test {
   public void factorial4で0の階乗の値が返却される() {
     int n = 0;
 
-    Long expected = 1L;
-    Long actual = AlgorithmInJava1.factorial4(n);
+    Optional<Long> expected = Optional.of(1L);
+    Optional<Long> actual = AlgorithmInJava1.factorial4(n);
     assertThat(actual, is(expected));
   }
 
@@ -790,8 +791,8 @@ public class AlgorithmInJava1Test {
   public void factorial4で1の階乗の値が返却される() {
     int n = 1;
 
-    Long expected = 1L;
-    Long actual = AlgorithmInJava1.factorial4(n);
+    Optional<Long> expected = Optional.of(1L);
+    Optional<Long> actual = AlgorithmInJava1.factorial4(n);
     assertThat(actual, is(expected));
   }
 
@@ -799,8 +800,8 @@ public class AlgorithmInJava1Test {
   public void factorial4で2の階乗の値が返却される() {
     int n = 2;
 
-    Long expected = 2L;
-    Long actual = AlgorithmInJava1.factorial4(n);
+    Optional<Long> expected = Optional.of(2L);
+    Optional<Long> actual = AlgorithmInJava1.factorial4(n);
     assertThat(actual, is(expected));
   }
 
@@ -808,17 +809,17 @@ public class AlgorithmInJava1Test {
   public void factorial4で5の階乗の値が返却される() {
     int n = 5;
 
-    Long expected = 120L;
-    Long actual = AlgorithmInJava1.factorial4(n);
+    Optional<Long> expected = Optional.of(120L);
+    Optional<Long> actual = AlgorithmInJava1.factorial4(n);
     assertThat(actual, is(expected));
   }
 
   @Test
-  public void factorial4でnがマイナス1のときnullが返却される() {
+  public void factorial4でnがマイナス1のときemptyが返却される() {
     int n = -1;
 
-    Long expected = null;
-    Long actual = AlgorithmInJava1.factorial4(n);
+    Optional<Long> expected = Optional.empty();
+    Optional<Long> actual = AlgorithmInJava1.factorial4(n);
     assertThat(actual, is(expected));
   }
 }
