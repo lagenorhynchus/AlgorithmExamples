@@ -34,7 +34,7 @@ var AlgorithmInJavaScript2 = (function () {
 
   return {
     // 逐次探索アルゴリズムによりリストlistの指定した要素targetの位置を取得する。
-    // リスト内に該当する要素がない場合、-1を返却する。
+    // リスト内に該当する要素がない場合、nullを返却する。
     sequentialSearch: function (list, target) {
       var i;
       var len = list.length;
@@ -45,11 +45,11 @@ var AlgorithmInJavaScript2 = (function () {
         }
       }
 
-      return -1;
+      return null;
     },
 
     // 二分探索アルゴリズムによりソート済みリストlistの指定した要素targetの位置を取得する。
-    // リスト内に該当する要素がない場合、-1を返却する。
+    // リスト内に該当する要素がない場合、nullを返却する。
     binarySearch: function (list, target) {
       var low = 0;
       var high = list.length - 1;
@@ -66,7 +66,7 @@ var AlgorithmInJavaScript2 = (function () {
         }
       }
 
-      return -1;
+      return null;
     },
 
     // バブルソートアルゴリズムによりリストlistを昇順にソートする。
