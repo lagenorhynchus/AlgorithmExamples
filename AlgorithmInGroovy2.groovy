@@ -9,7 +9,7 @@ class AlgorithmInGroovy2 {
    */
   static <T> Optional<Integer> sequentialSearch(List<T> list, T target) {
     // TODO: ロジックを実装
-    return Optional.empty()
+    Optional.empty()
   }
 
   /*
@@ -18,42 +18,42 @@ class AlgorithmInGroovy2 {
    */
   static <T extends Comparable<? super T>> Optional<Integer> binarySearch(List<T> list, T target) {
     // TODO: ロジックを実装
-    return Optional.empty()
+    Optional.empty()
   }
 
   /*
    * バブルソートアルゴリズムによりリストlistを昇順にソートする。
    */
   static <T extends Comparable<? super T>> List<T> bubbleSort(List<T> list) {
-    return bubbleSort(list) {a, b -> a.compareTo(b)}
+    bubbleSort(list) {a, b -> a.compareTo(b)}
   }
 
   static <T> List<T> bubbleSort(List<T> list, Comparator<? super T> comp) {
     // TODO: ロジックを実装
-    return list
+    list
   }
 
   /*
    * セレクションソートアルゴリズムによりリストlistを昇順にソートする。
    */
   static <T extends Comparable<? super T>> List<T> selectionSort(List<T> list) {
-    return selectionSort(list) {a, b -> a.compareTo(b)}
+    selectionSort(list) {a, b -> a.compareTo(b)}
   }
 
   static <T> List<T> selectionSort(List<T> list, Comparator<? super T> comp) {
     // TODO: ロジックを実装
-    return list
+    list
   }
 
   /*
    * クイックソートアルゴリズムによりリストlistを昇順にソートする。
    */
   static <T extends Comparable<? super T>> List<T> quickSort(List<T> list) {
-    return quickSort(list) {a, b -> a.compareTo(b)}
+    quickSort(list) {a, b -> a.compareTo(b)}
   }
 
   static <T> List<T> quickSort(List<T> list, Comparator<? super T> comp) {
     // TODO: ロジックを実装
-    return list
+    list
   }
 }

@@ -14,7 +14,7 @@ module AlgorithmInRuby2
       end
     end
 
-    return nil
+    nil
   end
 
   # 二分探索アルゴリズムによりソート済みリストlistの指定した要素targetの位置を取得する。
@@ -33,7 +33,7 @@ module AlgorithmInRuby2
       end
     end
 
-    return nil
+    nil
   end
 
   # バブルソートアルゴリズムによりリストlistを昇順にソートする。
@@ -47,7 +47,7 @@ module AlgorithmInRuby2
       end
     end
 
-    return list
+    list
   end
 
   # セレクションソートアルゴリズムによりリストlistを昇順にソートする。
@@ -63,13 +63,13 @@ module AlgorithmInRuby2
       swap(list, first, min)
     end
 
-    return list
+    list
   end
 
   # クイックソートアルゴリズムによりリストlistを昇順にソートする。
   def quick_sort(list)
     list = list.dup
-    return q_sort(list, 0, list.length - 1)
+    q_sort(list, 0, list.length - 1)
   end
 
   def q_sort(list, left, right)
@@ -91,7 +91,7 @@ module AlgorithmInRuby2
     q_sort(list, left, last - 1)
     q_sort(list, last + 1, right)
 
-    return list
+    list
   end
 
   def swap(list, x, y)

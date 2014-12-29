@@ -8,7 +8,7 @@ class AlgorithmInGroovy1 {
    */
   static boolean isLeapYear(int year) {
     // TODO: ロジックを実装
-    return false
+    false
   }
 
   /*
@@ -17,7 +17,7 @@ class AlgorithmInGroovy1 {
    */
   static boolean isPrime(int n) {
     // TODO: ロジックを実装
-    return false
+    false
   }
 
   /*
@@ -27,7 +27,7 @@ class AlgorithmInGroovy1 {
    */
   static Optional<Integer> gcd(int a, int b) {
     // TODO: ロジックを実装
-    return Optional.empty()
+    Optional.empty()
   }
 
   /*
@@ -35,7 +35,7 @@ class AlgorithmInGroovy1 {
    */
   static Optional<Integer> gcd2(int a, int b) {
     // TODO: ロジックを実装
-    return Optional.empty()
+    Optional.empty()
   }
 
   /*
@@ -44,7 +44,7 @@ class AlgorithmInGroovy1 {
    */
   static Optional<Integer> lcm(int a, int b) {
     // TODO: ロジックを実装
-    return Optional.empty()
+    Optional.empty()
   }
 
   /*
@@ -54,7 +54,7 @@ class AlgorithmInGroovy1 {
    */
   static Optional<Long> fibonacci(int i) {
     // TODO: ロジックを実装
-    return Optional.empty()
+    Optional.empty()
   }
 
   /*
@@ -62,14 +62,14 @@ class AlgorithmInGroovy1 {
    */
   static Optional<Long> fibonacci2(int i) {
     // TODO: ロジックを実装
-    return Optional.empty()
+    Optional.empty()
   }
 
   /*
    * 末尾再帰版
    */
   static Optional<Long> fibonacci3(int i) {
-    return Optional.empty()
+    Optional.empty()
   }
 
   /*
@@ -77,7 +77,7 @@ class AlgorithmInGroovy1 {
    */
   static Optional<Long> fibonacci4(int i) {
     // TODO: ロジックを実装
-    return Optional.empty()
+    Optional.empty()
   }
 
   /*
@@ -87,7 +87,7 @@ class AlgorithmInGroovy1 {
    */
   static Optional<Long> factorial(int n) {
     // TODO: ロジックを実装
-    return Optional.empty()
+    Optional.empty()
   }
 
   /*
@@ -95,7 +95,7 @@ class AlgorithmInGroovy1 {
    */
   static Optional<Long> factorial2(int n) {
     // TODO: ロジックを実装
-    return Optional.empty()
+    Optional.empty()
   }
 
   /*
@@ -103,7 +103,7 @@ class AlgorithmInGroovy1 {
    */
   static Optional<Long> factorial3(int n) {
     // TODO: ロジックを実装
-    return Optional.empty()
+    Optional.empty()
   }
 
   /*
@@ -111,6 +111,6 @@ class AlgorithmInGroovy1 {
    */
   static Optional<Long> factorial4(int n) {
     // TODO: ロジックを実装
-    return Optional.empty()
+    Optional.empty()
   }
 }

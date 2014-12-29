@@ -8,11 +8,11 @@ module AlgorithmInRuby1
   # 西暦年yearが閏年かどうかを判定する。
   def leap_year?(year)
     if year % 4 == 0 && year % 100 != 0
-      return true
+      true
     elsif year % 400 == 0
-      return true
+      true
     else
-      return false
+      false
     end
   end
 
@@ -30,7 +30,7 @@ module AlgorithmInRuby1
       end
     end
 
-    return true
+    true
   end
 
   # 高階関数版
@@ -40,7 +40,7 @@ module AlgorithmInRuby1
     end
 
     stop_point = Math.sqrt(n).to_i
-    return (2..stop_point).all? {|i| n % i != 0}
+    (2..stop_point).all? {|i| n % i != 0}
   end
 
   # ユークリッドの互除法により整数a, bの最大公約数を算出する。
@@ -54,7 +54,7 @@ module AlgorithmInRuby1
     while b > 0
       a, b = b, (a % b)
     end
-    return a
+    a
   end
 
   # 減算版
@@ -81,7 +81,7 @@ module AlgorithmInRuby1
       return nil
     end
 
-    return a * b / gcd(a, b)
+    a * b / gcd(a, b)
   end
 
   # フィボナッチ数列の第i項の値を算出する。
@@ -97,7 +97,7 @@ module AlgorithmInRuby1
     i.times do
       previous, current = current, (previous + current)
     end
-    return current
+    current
   end
 
   # 再帰版
@@ -108,7 +108,7 @@ module AlgorithmInRuby1
       return 1
     end
 
-    return fibonacci_2(i - 2) + fibonacci_2(i - 1)
+    fibonacci_2(i - 2) + fibonacci_2(i - 1)
   end
 
   # 末尾再帰版
@@ -122,9 +122,9 @@ module AlgorithmInRuby1
         return previous + current
       end
 
-      return fib(x - 1, current, previous + current)
+      fib(x - 1, current, previous + current)
     end
-    return fib(i, 1, 0)
+    fib(i, 1, 0)
   end
 
   # 再帰(メモ化)版
@@ -140,9 +140,9 @@ module AlgorithmInRuby1
         fib_hash[x] = fib(x - 2) + fib(x - 1)
       end
 
-      return fib_hash[x]
+      fib_hash[x]
     end
-    return fib(i)
+    fib(i)
   end
 
   # 整数nの階乗n!の値を算出する。
@@ -157,7 +157,7 @@ module AlgorithmInRuby1
     (2..n).each do |i|
       product *= i
     end
-    return product
+    product
   end
 
   # 再帰版
@@ -168,7 +168,7 @@ module AlgorithmInRuby1
       return 1
     end
 
-    return n * factorial_2(n - 1)
+    n * factorial_2(n - 1)
   end
 
   # 末尾再帰版
@@ -182,9 +182,9 @@ module AlgorithmInRuby1
         return product
       end
 
-      return fact(x - 1, product * x)
+      fact(x - 1, product * x)
     end
-    return fact(n, 1)
+    fact(n, 1)
   end
 
   # 畳み込み版
@@ -193,7 +193,7 @@ module AlgorithmInRuby1
       return nil
     end
 
-    return (2..n).inject(1) {|product, i| product * i}
+    (2..n).inject(1) {|product, i| product * i}
   end
 
   # 畳み込み版2
@@ -202,6 +202,6 @@ module AlgorithmInRuby1
       return nil
     end
 
-    return (2..n).inject(1, :*)
+    (2..n).inject(1, :*)
   end
 end
