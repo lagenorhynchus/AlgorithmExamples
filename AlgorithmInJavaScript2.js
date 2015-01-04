@@ -1,6 +1,8 @@
 // リストの探索とソートのアルゴリズム
 
 var AlgorithmInJavaScript2 = (function () {
+  "use strict";
+
   var swap = function (list, x, y) {
     var tmp = list[x];
 

@@ -3,6 +3,8 @@
 var _ = typeof require === "undefined" ? _ : require("underscore");
 
 var AlgorithmInJavaScript1 = (function () {
+  "use strict";
+
   return {
     // 西暦年yearが閏年かどうかを判定する。
     isLeapYear: function (year) {
