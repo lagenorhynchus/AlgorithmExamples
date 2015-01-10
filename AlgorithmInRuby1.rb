@@ -40,7 +40,7 @@ module AlgorithmInRuby1
     end
 
     stop_point = Math.sqrt(n).to_i
-    (2..stop_point).all? {|i| n % i != 0}
+    (2..stop_point).all? { |i| n % i != 0 }
   end
 
   # ユークリッドの互除法により整数a, bの最大公約数を算出する。
@@ -193,7 +193,7 @@ module AlgorithmInRuby1
       return nil
     end
 
-    (2..n).inject(1) {|product, i| product * i}
+    (2..n).inject(1) { |product, i| product * i }
   end
 
   # 畳み込み版2
