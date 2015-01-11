@@ -1,6 +1,6 @@
 // リストの探索とソートのアルゴリズム
 
-var AlgorithmInJavaScript2 = (function () {
+(function () {
   "use strict";
 
   var swap = function (list, x, y) {
@@ -34,7 +34,7 @@ var AlgorithmInJavaScript2 = (function () {
     return list;
   };
 
-  return {
+  var AlgorithmInJavaScript2 = {
     // 逐次探索アルゴリズムによりリストlistの指定した要素targetの位置を取得する。
     // リスト内に該当する要素がない場合、nullを返却する。
     sequentialSearch: function (list, target) {
@@ -114,4 +114,9 @@ var AlgorithmInJavaScript2 = (function () {
       return  qSort(list, 0, list.length - 1);
     }
   };
-}());
+  if (typeof module !== "undefined" && module.exports) {
+    module.exports = AlgorithmInJavaScript2;
+  } else {
+    this.AlgorithmInJavaScript2 = AlgorithmInJavaScript2;
+  }
+}.call(this));

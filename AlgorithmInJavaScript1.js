@@ -1,11 +1,11 @@
 // 数値計算のアルゴリズム
 
-var _ = typeof require === "undefined" ? _ : require("underscore");
-
-var AlgorithmInJavaScript1 = (function () {
+(function () {
   "use strict";
 
-  return {
+  var _ = typeof require === "undefined" ? this._ : require("underscore");
+
+  var AlgorithmInJavaScript1 = {
     // 西暦年yearが閏年かどうかを判定する。
     isLeapYear: function (year) {
       if (year % 4 === 0 && year % 100 !== 0) {
@@ -221,4 +221,9 @@ var AlgorithmInJavaScript1 = (function () {
       }, 1);
     }
   };
-}());
+  if (typeof module !== "undefined" && module.exports) {
+    module.exports = AlgorithmInJavaScript1;
+  } else {
+    this.AlgorithmInJavaScript1 = AlgorithmInJavaScript1;
+  }
+}.call(this));
