@@ -3,7 +3,7 @@
 (function () {
   "use strict";
 
-  var _ = typeof require === "undefined" ? this._ : require("underscore");
+  var _ = typeof require !== "undefined" ? require("underscore") : this._;
 
   var AlgorithmInJavaScript1 = {
     // 西暦年yearが閏年かどうかを判定する。
