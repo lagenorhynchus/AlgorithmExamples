@@ -5,9 +5,9 @@
 ;;; 西暦年yearが閏年かどうかを判定する。
 (defn leap-year? [year]
   (cond
-    (and (= (rem year 4) 0)
-         (not= (rem year 100) 0)) true
-    (= (rem year 400) 0)          true
+    (and (= (mod year 4) 0)
+         (not= (mod year 100) 0)) true
+    (= (mod year 400) 0)          true
     :else                         false))
 
 ;;; 整数nが素数かどうかを判定する。
@@ -15,7 +15,7 @@
   (if (< n 2)
     false
     (let [stop-point (Math/floor (Math/sqrt n))]
-      (every? (fn [x] (not= (rem n x) 0)) (range 2 (inc stop-point))))))
+      (every? (fn [x] (not= (mod n x) 0)) (range 2 (inc stop-point))))))
 
 ;;; ユークリッドの互除法により整数a, bの最大公約数を算出する。
 ;;; a, bが1未満の場合、nilを返却する。
@@ -26,7 +26,7 @@
     (letfn [(divide [x y]
               (if (= y 0)
                 x
-                (recur y (rem x y))))]
+                (recur y (mod x y))))]
       (divide a b))))
 
 ;;; 減算版
