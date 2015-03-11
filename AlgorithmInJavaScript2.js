@@ -119,4 +119,4 @@
   } else {
     this.AlgorithmInJavaScript2 = AlgorithmInJavaScript2;
   }
-}.call(this));
+}).call(this);

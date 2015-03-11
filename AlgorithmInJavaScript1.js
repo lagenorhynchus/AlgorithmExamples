@@ -226,4 +226,4 @@
   } else {
     this.AlgorithmInJavaScript1 = AlgorithmInJavaScript1;
   }
-}.call(this));
+}).call(this);
