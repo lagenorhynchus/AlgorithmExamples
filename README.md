@@ -1,4 +1,4 @@
 AlgorithmExamples
 =================
 
-数値計算や配列/リスト操作に関する典型的なアルゴリズムの実装例。
+Implementation of typical algorithms about numeric & array/list operations.
